@@ -1,0 +1,7 @@
+{
+  "parent": "icon/generated",
+  "textures": {
+    "layer0": "electricitymod:items/plate_silicon"
+  }
+  
+}

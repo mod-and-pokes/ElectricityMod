@@ -1,0 +1,8 @@
+item.ingot.copper.name=Copper
+item.ingot.tin.name=Tin
+item.computer_chip.name=Computer Chip
+item.plate_silicon.name=Silicon Plate
+item.flatbread.name=Flatbread
+
+tile.concrete.name=Concrete
+tile.machine_silicon.name=Silicon Processor

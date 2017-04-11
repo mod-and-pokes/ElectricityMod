@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "electricitymod",
+    "name": "Electricity Mod",
+    "description": "Currently testing my mod",
+    "version": "0.0.0.0-a",
+    "mcversion": "1.10.2",
+    "logoFile": "assets/electricity/textures/logo.png",
+    "url": "minecraftforge.net/",
+    "updateJSON": "minecraftforge.net/versions.json",
+    "authorList": [
+      "boblovespi"
+    ],
+    "credits": "Thanks to the Forge team for making this"
+  }
+]
