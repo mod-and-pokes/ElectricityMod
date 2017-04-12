@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "electricitymod:machine_solar_panel"
+    }
+  }
+}

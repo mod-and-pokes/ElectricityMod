@@ -15,6 +15,7 @@ public class SiliconPlate extends Item
 		super();
 		setRegistryName(REGISTERY_NAME());
 		setUnlocalizedName(UNLOCALIZED_NAME());
+		setCreativeTab(CreativeTabs.MATERIALS);
 	}
 
 	@Override public String UNLOCALIZED_NAME()

@@ -8,5 +8,6 @@ import net.minecraft.util.ITickable;
 public interface IRunnableMachine extends ITickable
 {
 	public boolean AttemptRun();
+
 	public boolean IsRunning();
 }
