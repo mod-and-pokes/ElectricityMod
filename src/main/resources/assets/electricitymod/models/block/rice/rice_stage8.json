@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "electricitymod:blocks/rice_crop/stage8"
+  }
+}

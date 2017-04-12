@@ -1,12 +1,13 @@
 package boblovespi.electricitymod.block;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 /**
  * Created by Willi on 4/11/2017.
  */
-public class Concrete extends Block
+public class Concrete extends Block implements EMBlock
 {
 	public Concrete()
 	{
@@ -24,5 +25,15 @@ public class Concrete extends Block
 	@Override public String REGISTERY_NAME()
 	{
 		return UNLOCALIZED_NAME();
+	}
+
+	@Override public String getMetaFilePath(int meta)
+	{
+		return REGISTERY_NAME();
+	}
+
+	@Override public Block toBlock()
+	{
+		return this;
 	}
 }

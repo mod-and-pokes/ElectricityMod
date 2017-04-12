@@ -49,7 +49,7 @@ public class TileEntitySiliconProcessor extends TileEntity
 			worldObj.spawnEntityInWorld(
 					new EntityItem(worldObj, pos.getX() + 0.5, pos.getY() + 1.1,
 							pos.getZ() + 0.5,
-							new ItemStack(ItemInit.siliconPlate)));
+							new ItemStack(ItemInit.siliconPlate.toItem())));
 			isProcessing = false;
 			needsUpdate = true;
 		}

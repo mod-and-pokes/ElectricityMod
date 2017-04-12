@@ -1,9 +1,10 @@
 package boblovespi.electricitymod.block.machine;
 
-import boblovespi.electricitymod.block.Block;
+import boblovespi.electricitymod.block.EMBlock;
 import boblovespi.electricitymod.creativetabs.MachineTab;
 import boblovespi.electricitymod.tileentity.IRunnableMachine;
 import boblovespi.electricitymod.tileentity.TileEntitySiliconProcessor;
+import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -28,7 +29,8 @@ import java.util.Random;
 /**
  * Created by Willi on 4/11/2017.
  */
-public class SiliconProcessor extends Block implements ITileEntityProvider
+public class SiliconProcessor extends Block
+		implements ITileEntityProvider, EMBlock
 {
 	public SiliconProcessor()
 	{
@@ -46,6 +48,16 @@ public class SiliconProcessor extends Block implements ITileEntityProvider
 	@Override public String REGISTERY_NAME()
 	{
 		return UNLOCALIZED_NAME();
+	}
+
+	@Override public String getMetaFilePath(int meta)
+	{
+		return REGISTERY_NAME();
+	}
+
+	@Override public Block toBlock()
+	{
+		return this;
 	}
 
 	@Override public TileEntity createNewTileEntity(World world, int i)

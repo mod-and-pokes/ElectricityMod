@@ -1,11 +1,12 @@
 package boblovespi.electricitymod.item;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 
 /**
  * Created by Willi on 4/11/2017.
  */
-public class Flatbread extends ItemFood
+public class Flatbread extends ItemFood implements EMItem
 {
 	public Flatbread()
 	{
@@ -14,14 +15,24 @@ public class Flatbread extends ItemFood
 		setUnlocalizedName(UNLOCALIZED_NAME());
 	}
 
-	public String UNLOCALIZED_NAME()
+	@Override public String UNLOCALIZED_NAME()
 	{
 		return "flatbread";
 	}
 
-	public String REGISTERY_NAME()
+	@Override public String REGISTERY_NAME()
 	{
 		return UNLOCALIZED_NAME();
+	}
+
+	@Override public String getMetaFilePath(int meta)
+	{
+		return REGISTERY_NAME();
+	}
+
+	@Override public Item toItem()
+	{
+		return this;
 	}
 
 }

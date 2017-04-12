@@ -18,6 +18,6 @@ public class MachineTab extends CreativeTabs
 
 	@Override public Item getTabIconItem()
 	{
-		return Item.getItemFromBlock(BlockInit.solarPanel);
+		return Item.getItemFromBlock(BlockInit.solarPanel.toBlock());
 	}
 }

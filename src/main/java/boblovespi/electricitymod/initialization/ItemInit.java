@@ -5,7 +5,6 @@ import boblovespi.electricitymod.item.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.ItemFood;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -14,10 +13,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ItemInit
 {
-	public static Item ingot;
-	public static Item computerChip;
-	public static Item siliconPlate;
-	public static ItemFood flatbread;
+	public static EMItem ingot;
+	public static EMItem computerChip;
+	public static EMItem siliconPlate;
+	public static EMItem flatbread;
+	public static EMItem riceGrain;
 
 	public static void Init()
 	{
@@ -26,6 +26,7 @@ public class ItemInit
 		computerChip = new ComputerChip();
 		siliconPlate = new SiliconPlate();
 		flatbread = new Flatbread();
+		riceGrain = new RiceGrain();
 	}
 
 	private static void SetNames()
@@ -36,11 +37,17 @@ public class ItemInit
 
 	public static void Register()
 	{
-		GameRegistry.register(ingot);
+		RegisterItem(ingot);
 
-		GameRegistry.register(computerChip);
-		GameRegistry.register(siliconPlate);
-		GameRegistry.register(flatbread);
+		RegisterItem(computerChip);
+		RegisterItem(siliconPlate);
+		RegisterItem(flatbread);
+		RegisterItem(riceGrain);
+	}
+
+	private static void RegisterItem(EMItem i)
+	{
+		GameRegistry.register(i.toItem());
 	}
 
 	public static void RegisterRenders()
@@ -52,10 +59,12 @@ public class ItemInit
 
 		RegisterRender(computerChip, 0);
 		RegisterRender(siliconPlate, 0);
-		RegisterVanillaItemRender(flatbread, 0);
+		RegisterRender(flatbread, 0);
+
+		RegisterRender(riceGrain, 0);
 	}
 
-	private static void RegisterRender(Item item, int meta)
+	private static void RegisterRender(EMItem item, int meta)
 	{
 		System.out.println(
 				"The other file path: " + ElectricityMod.MOD_ID + ":" + item
@@ -69,7 +78,7 @@ public class ItemInit
 				"The other model resource location: " + loc.toString());
 
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-				.register(item, meta, loc);
+				.register(item.toItem(), meta, loc);
 	}
 
 	private static void RegisterVanillaItemRender(net.minecraft.item.Item item,
@@ -83,21 +92,21 @@ public class ItemInit
 				.register(item, meta, loc);
 	}
 
-	private static void RegisterRender(Item item, int meta, String loca)
+	private static void RegisterRender(EMItem item, int meta, String loca)
 	{
 		ModelResourceLocation loc = new ModelResourceLocation(
 						/*ElectricityMod.MOD_ID + ":" +
 				item.getMetaFilePath(meta)*/
-				item.getRegistryName(), "inventory");
+				item.toItem().getRegistryName(), "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-				.register(item, meta, new ModelResourceLocation(
+				.register(item.toItem(), meta, new ModelResourceLocation(
 						new ResourceLocation(ElectricityMod.MOD_ID, loca),
 						"inventory"));
 	}
 
 	public static void RegisterVariations()
 	{
-		ModelBakery.registerItemVariants(ingot,
+		ModelBakery.registerItemVariants(ingot.toItem(),
 				new ResourceLocation(ElectricityMod.MOD_ID,
 						ingot.getMetaFilePath(0)),
 				new ResourceLocation(ElectricityMod.MOD_ID,

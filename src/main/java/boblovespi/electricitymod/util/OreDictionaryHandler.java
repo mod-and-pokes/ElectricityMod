@@ -11,11 +11,21 @@ public class OreDictionaryHandler
 {
 	public static void Register()
 	{
+		// Ingots
+
 		OreDictionary.registerOre("ingotCopper",
-				new ItemStack(ItemInit.ingot, 1, 0));
+				new ItemStack(ItemInit.ingot.toItem(), 1, 0));
+		OreDictionary.registerOre("ingotTin",
+				new ItemStack(ItemInit.ingot.toItem(), 1, 1));
+		OreDictionary.registerOre("ingotBronze",
+				new ItemStack(ItemInit.ingot.toItem(), 1, 2));
+		OreDictionary.registerOre("ingotSteel",
+				new ItemStack(ItemInit.ingot.toItem(), 1, 3));
+
+		// Misc
+
+		OreDictionary.registerOre("chipBasic", ItemInit.computerChip.toItem());
 		OreDictionary
-				.registerOre("ingotTin", new ItemStack(ItemInit.ingot, 1, 1));
-		OreDictionary.registerOre("chipBasic", ItemInit.computerChip);
-		OreDictionary.registerOre("plateSilicon", ItemInit.siliconPlate);
+				.registerOre("plateSilicon", ItemInit.siliconPlate.toItem());
 	}
 }
