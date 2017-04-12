@@ -28,6 +28,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 	@SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS) public static CommonProxy proxy;
 
+
+
 	@Mod.EventHandler public void PreInit(FMLPreInitializationEvent e)
 	{
 		//Logger log = e.getModLog();

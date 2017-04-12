@@ -2,7 +2,8 @@ package boblovespi.electricitymod.initialization;
 
 import boblovespi.electricitymod.block.Block;
 import boblovespi.electricitymod.block.Concrete;
-import boblovespi.electricitymod.block.SiliconProcessor;
+import boblovespi.electricitymod.block.machine.BasicSolarPanel;
+import boblovespi.electricitymod.block.machine.SiliconProcessor;
 import boblovespi.electricitymod.item.Item;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -16,17 +17,20 @@ public class BlockInit
 {
 	public static Block concrete;
 	public static Block siliconProcessor;
+	public static Block solarPanel;
 
 	public static void Init()
 	{
 		concrete = new Concrete();
 		siliconProcessor = new SiliconProcessor();
+		solarPanel = new BasicSolarPanel();
 	}
 
 	public static void Register()
 	{
 		RegisterBlock(concrete);
 		RegisterBlock(siliconProcessor);
+		RegisterBlock(solarPanel);
 	}
 
 	private static void RegisterBlock(Block block)
@@ -42,6 +46,7 @@ public class BlockInit
 	{
 		RegisterRender(concrete);
 		RegisterRender(siliconProcessor);
+		RegisterRender(solarPanel);
 	}
 
 	private static void RegisterRender(Block block)

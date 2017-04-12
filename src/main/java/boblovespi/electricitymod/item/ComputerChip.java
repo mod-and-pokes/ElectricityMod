@@ -1,5 +1,6 @@
 package boblovespi.electricitymod.item;
 
+import boblovespi.electricitymod.creativetabs.MachineTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
@@ -16,6 +17,7 @@ public class ComputerChip extends Item
 		System.out.println("[ELCM] unlocalized name: " + UNLOCALIZED_NAME());
 		setUnlocalizedName(UNLOCALIZED_NAME());
 		setRegistryName(REGISTERY_NAME());
+		setCreativeTab(MachineTab.MACHINE_TAB);
 	}
 
 	@Override public String UNLOCALIZED_NAME()

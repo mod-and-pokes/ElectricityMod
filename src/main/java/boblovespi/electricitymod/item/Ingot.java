@@ -17,6 +17,7 @@ public class Ingot extends Item implements IMulitTypable
 		setUnlocalizedName(UNLOCALIZED_NAME());
 		setRegistryName(REGISTERY_NAME());
 		setHasSubtypes(true);
+		setCreativeTab(CreativeTabs.MATERIALS);
 	}
 
 	@Override public String getUnlocalizedName(ItemStack items)

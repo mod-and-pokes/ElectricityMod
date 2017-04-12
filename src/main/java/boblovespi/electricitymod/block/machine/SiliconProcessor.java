@@ -1,5 +1,7 @@
-package boblovespi.electricitymod.block;
+package boblovespi.electricitymod.block.machine;
 
+import boblovespi.electricitymod.block.Block;
+import boblovespi.electricitymod.creativetabs.MachineTab;
 import boblovespi.electricitymod.tileentity.IRunnableMachine;
 import boblovespi.electricitymod.tileentity.TileEntitySiliconProcessor;
 import net.minecraft.block.ITileEntityProvider;
@@ -33,6 +35,7 @@ public class SiliconProcessor extends Block implements ITileEntityProvider
 		super(Material.ANVIL);
 		setRegistryName(REGISTERY_NAME());
 		setUnlocalizedName(UNLOCALIZED_NAME());
+		setCreativeTab(MachineTab.MACHINE_TAB);
 	}
 
 	@Override public String UNLOCALIZED_NAME()
