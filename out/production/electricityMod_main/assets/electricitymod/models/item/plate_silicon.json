@@ -1,5 +1,5 @@
 {
-  "parent": "icon/generated",
+  "parent": "item/generated",
   "textures": {
     "layer0": "electricitymod:items/plate_silicon"
   }

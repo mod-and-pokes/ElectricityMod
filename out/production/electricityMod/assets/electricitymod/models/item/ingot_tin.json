@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "electricitymod:items/ingot_copper"
+    "layer0": "electricitymod:items/ingot_tin"
   }
   
 }

@@ -62,9 +62,8 @@ public class ItemInit
 						.getMetaFilePath(meta));
 
 		ModelResourceLocation loc = new ModelResourceLocation(
-						/*ElectricityMod.MOD_ID + ":" +
-				item.getMetaFilePath(meta)*/
-				item.getRegistryName(), "inventory");
+				new ResourceLocation(ElectricityMod.MOD_ID,
+						item.getMetaFilePath(0)), "inventory");
 
 		System.out.println(
 				"The other model resource location: " + loc.toString());
