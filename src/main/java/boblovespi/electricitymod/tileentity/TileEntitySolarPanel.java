@@ -84,7 +84,7 @@ public class TileEntitySolarPanel extends TileEntity
 
 	@Override public boolean Ping(IUsesEnergy machine)
 	{
-		return false;
+		return connections.contains(machine);
 	}
 
 	@Override @Deprecated public float getEnergyAmount()
@@ -94,6 +94,8 @@ public class TileEntitySolarPanel extends TileEntity
 
 	@Override public void AddConnection(IUsesEnergy machine)
 	{
+		if (!connections.contains(machine))
+			connections.add(machine);
 
 	}
 
@@ -103,10 +105,11 @@ public class TileEntitySolarPanel extends TileEntity
 		{
 			if (connections.remove(machine))
 			{
-
+				machine.UpdateConnections();
+				UpdateConnections();
 			}
-		} else
-			return false;
+		}
+		return false;
 	}
 
 	@Override public boolean RequestEnergy(float amount)
