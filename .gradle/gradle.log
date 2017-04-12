@@ -1,0 +1,47 @@
+#################################################
+         ForgeGradle 2.2-SNAPSHOT-7f5a769        
+  https://github.com/MinecraftForge/ForgeGradle  
+#################################################
+               Powered by MCP unknown               
+             http://modcoderpack.com             
+         by: Searge, ProfMobius, Fesh0r,         
+         R4wk, ZeuX, IngisKahn, bspkrs           
+#################################################
+Version string '0.0.0.0/a' does not match SemVer specification 
+You should try SemVer : http://semver.org/
+:deobfCompileDummyTask
+:deobfProvidedDummyTask
+:eclipseClasspath
+:eclipseJdt
+:eclipseProject
+:getVersionJson
+:extractNatives SKIPPED
+:extractUserdev
+:getAssetIndex UP-TO-DATE
+:getAssets
+Current status: 28/1112   2%
+Current status: 72/1112   6%
+Current status: 110/1112   9%
+Current status: 166/1112   14%
+Current status: 214/1112   19%
+Current status: 264/1112   23%
+Current status: 321/1112   28%
+Current status: 392/1112   35%
+Current status: 441/1112   39%
+Current status: 500/1112   44%
+Current status: 552/1112   49%
+Current status: 623/1112   56%
+Current status: 705/1112   63%
+Current status: 783/1112   70%
+Current status: 852/1112   76%
+Current status: 891/1112   80%
+Current status: 964/1112   86%
+Current status: 1031/1112   92%
+:makeStart
+:makeEclipseCleanRunClient
+:makeEclipseCleanRunServer
+:eclipse
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 22.866 secs
