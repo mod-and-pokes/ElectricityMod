@@ -1,35 +1,37 @@
-[16:58:14] [Client thread/INFO]: Setting user: Player730
-[16:58:20] [Client thread/WARN]: Skipping bad option: lastServer:
-[16:58:20] [Client thread/INFO]: LWJGL Version: 2.9.4
-[16:58:28] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[16:58:34] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[16:58:34] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[16:58:34] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[16:58:34] [Thread-8/INFO]: OpenAL initialized.
-[16:58:35] [Sound Library Loader/INFO]: Sound engine started
-[16:58:42] [Client thread/INFO]: Created: 16x16 textures-atlas
-[16:58:47] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[16:58:50] [Client thread/INFO]: SoundSystem shutting down...
-[16:58:50] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[16:58:50] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[16:58:51] [Thread-10/INFO]: Initializing LWJGL OpenAL
-[16:58:51] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[16:58:51] [Thread-10/INFO]: OpenAL initialized.
-[16:58:51] [Sound Library Loader/INFO]: Sound engine started
-[16:58:54] [Client thread/INFO]: Created: 512x512 textures-atlas
-[16:58:58] [Client thread/WARN]: Skipping bad option: lastServer:
-[16:58:59] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[16:59:17] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
-[16:59:17] [Server thread/INFO]: Generating keypair
-[16:59:18] [Server thread/INFO]: Preparing start region for level 0
-[16:59:19] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:59:20] [Server thread/INFO]: Player730[local:E:ab758481] logged in with entity id 12 at (713.5644113270752, 56.0, -439.4799127175246)
-[16:59:20] [Server thread/INFO]: Player730 joined the game
-[16:59:22] [Server thread/INFO]: Saving and pausing game...
-[16:59:22] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[16:59:23] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[16:59:23] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[16:59:23] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@3b84d0c8[id=409ad871-75ba-3dbd-b116-807d64800e7d,name=Player730,properties={},legacy=false]
+[21:27:29] [Client thread/INFO]: Setting user: Player665
+[21:27:38] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:27:38] [Client thread/INFO]: LWJGL Version: 2.9.4
+[21:27:45] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[21:27:52] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:27:53] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[21:27:53] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:27:53] [Thread-8/INFO]: OpenAL initialized.
+[21:27:53] [Sound Library Loader/INFO]: Sound engine started
+[21:28:03] [Client thread/INFO]: Created: 16x16 textures-atlas
+[21:28:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[21:28:10] [Client thread/INFO]: SoundSystem shutting down...
+[21:28:10] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:28:10] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:28:10] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[21:28:10] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:28:10] [Thread-10/INFO]: OpenAL initialized.
+[21:28:10] [Sound Library Loader/INFO]: Sound engine started
+[21:28:14] [Client thread/INFO]: Created: 512x512 textures-atlas
+[21:28:17] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:28:19] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[21:30:00] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[21:30:00] [Server thread/INFO]: Generating keypair
+[21:30:02] [Server thread/INFO]: Preparing start region for level 0
+[21:30:03] [Server thread/INFO]: Preparing spawn area: 41%
+[21:30:04] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:30:06] [Server thread/INFO]: Player665[local:E:129bc731] logged in with entity id 44 at (702.9517987640536, 57.0, -440.2253705133317)
+[21:30:06] [Server thread/INFO]: Player665 joined the game
+[21:30:08] [Server thread/INFO]: Saving and pausing game...
+[21:30:08] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:30:08] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:30:08] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:30:09] [Server thread/INFO]: Saving and pausing game...
+[21:30:09] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@4f9cabc2[id=5daba5f8-966b-3165-8089-02aaa9b1e740,name=Player665,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
@@ -51,29 +53,74 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_121]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_121]
 	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
-[16:59:24] [Server thread/INFO]: Saving and pausing game...
-[16:59:24] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[16:59:24] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[16:59:24] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[17:00:45] [Server thread/INFO]: Saving and pausing game...
-[17:00:45] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[17:00:45] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[17:00:45] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[17:01:03] [Server thread/INFO]: Saving and pausing game...
-[17:01:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[17:01:04] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[17:01:04] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[17:01:11] [Server thread/INFO]: Player730 has just earned the achievement [Taking Inventory]
-[17:01:11] [Client thread/INFO]: [CHAT] Player730 has just earned the achievement [Taking Inventory]
-[17:02:01] [Server thread/INFO]: Saving and pausing game...
-[17:02:01] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[17:02:02] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[17:02:02] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[17:03:09] [Server thread/INFO]: Saving and pausing game...
-[17:03:09] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[17:03:09] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[17:03:09] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[17:03:24] [Server thread/INFO]: Saving and pausing game...
-[17:03:24] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[17:03:24] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[17:03:24] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:30:09] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:30:09] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:30:09] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:32:32] [Server thread/INFO]: [CHAT] Power: 22.0 | Can see sky: true
+[21:32:33] [Server thread/INFO]: [CHAT] Power: 22.0 | Can see sky: true
+[21:32:37] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:39] [Server thread/INFO]: [CHAT] Power: 19.0 | Can see sky: true
+[21:32:40] [Server thread/INFO]: [CHAT] Power: 22.0 | Can see sky: true
+[21:32:44] [Server thread/INFO]: [CHAT] Power: 22.0 | Can see sky: true
+[21:32:44] [Server thread/INFO]: [CHAT] Power: 19.0 | Can see sky: true
+[21:32:45] [Server thread/INFO]: [CHAT] Power: 16.0 | Can see sky: true
+[21:32:47] [Server thread/INFO]: [CHAT] Power: 14.0 | Can see sky: true
+[21:32:47] [Server thread/INFO]: [CHAT] Power: 12.0 | Can see sky: true
+[21:32:48] [Server thread/INFO]: [CHAT] Power: 10.0 | Can see sky: true
+[21:32:49] [Server thread/INFO]: [CHAT] Power: 8.0 | Can see sky: true
+[21:32:49] [Server thread/INFO]: [CHAT] Power: 6.0 | Can see sky: true
+[21:32:49] [Server thread/INFO]: [CHAT] Power: 4.0 | Can see sky: true
+[21:32:50] [Server thread/INFO]: [CHAT] Power: 3.0 | Can see sky: true
+[21:32:50] [Server thread/INFO]: [CHAT] Power: 3.0 | Can see sky: true
+[21:32:50] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:50] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:50] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:51] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:51] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:51] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:51] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:51] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:52] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:52] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:52] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:52] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:52] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:53] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:53] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:53] [Server thread/INFO]: [CHAT] Power: 3.0 | Can see sky: true
+[21:32:53] [Server thread/INFO]: [CHAT] Power: 3.0 | Can see sky: true
+[21:32:53] [Server thread/INFO]: [CHAT] Power: 3.0 | Can see sky: true
+[21:32:54] [Server thread/INFO]: [CHAT] Power: 4.0 | Can see sky: true
+[21:32:54] [Server thread/INFO]: [CHAT] Power: 3.0 | Can see sky: true
+[21:32:54] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:54] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:54] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:55] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:32:55] [Server thread/INFO]: [CHAT] Power: 0.0 | Can see sky: false
+[21:33:01] [Server thread/INFO]: Player665 has just earned the achievement [Taking Inventory]
+[21:33:02] [Client thread/INFO]: [CHAT] Player665 has just earned the achievement [Taking Inventory]
+[21:33:03] [Server thread/INFO]: Saving and pausing game...
+[21:33:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:33:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:33:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:34:42] [Server thread/INFO]: Saving and pausing game...
+[21:34:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:34:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:34:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:35:45] [Server thread/INFO]: Saving and pausing game...
+[21:35:45] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:35:45] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:35:45] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:37:20] [Server thread/INFO]: Saving and pausing game...
+[21:37:20] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:37:20] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:37:20] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:37:21] [Server thread/INFO]: Stopping server
+[21:37:21] [Server thread/INFO]: Saving players
+[21:37:21] [Server thread/INFO]: Saving worlds
+[21:37:21] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:37:21] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:37:21] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:37:23] [Client thread/INFO]: Stopping!
+[21:37:23] [Client thread/INFO]: SoundSystem shutting down...
+[21:37:23] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

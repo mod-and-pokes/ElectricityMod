@@ -14,4 +14,8 @@ public interface IUsesEnergy
 	public boolean Ping(IUsesEnergy machine);
 
 	public float getEnergyAmount();
+
+	public void AddConnection(IUsesEnergy machine);
+
+	public boolean RemoveConnection(IUsesEnergy machine);
 }
