@@ -6,6 +6,7 @@ item.computer_chip.name=Computer Chip
 item.plate_silicon.name=Silicon Plate
 item.flatbread.name=Flatbread
 item.rice.name=Rice
+item.chinesefood.name=Chinese Food
 
 item.bronze_axe.name=Bronze Axe
 item.bronze_hoe.name=Bronze Hoe
