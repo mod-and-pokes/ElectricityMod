@@ -6,11 +6,13 @@ import boblovespi.electricitymod.initialization.ItemInit;
 import boblovespi.electricitymod.initialization.ToolInit;
 import boblovespi.electricitymod.proxy.CommonProxy;
 import boblovespi.electricitymod.util.OreDictionaryHandler;
+import gruffindor.electricitymod.worldgen.OreGen;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * Created by Willi on 4/10/2017.
@@ -61,6 +63,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 		CraftingInit.Register();
 
 		proxy.Init();
+		
+		GameRegistry.registerWorldGenerator(new OreGen(), 0);
 
 	}
 

@@ -5,6 +5,7 @@ import boblovespi.electricitymod.block.EMBlock;
 import boblovespi.electricitymod.block.RiceCrop;
 import boblovespi.electricitymod.block.machine.BasicSolarPanel;
 import boblovespi.electricitymod.block.machine.SiliconProcessor;
+import gruffindor.electricitymod.block.Ore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class BlockInit
 {
+	public static EMBlock tinOre;
 	public static EMBlock concrete;
 	public static EMBlock siliconProcessor;
 	public static EMBlock solarPanel;
@@ -23,6 +25,7 @@ public class BlockInit
 
 	public static void Init()
 	{
+		tinOre = new Ore("tin");
 		concrete = new Concrete();
 		siliconProcessor = new SiliconProcessor();
 		solarPanel = new BasicSolarPanel();
@@ -35,6 +38,7 @@ public class BlockInit
 		RegisterBlock(siliconProcessor);
 		RegisterBlock(solarPanel);
 		RegisterBlock(riceCrop);
+		RegisterBlock(tinOre);
 	}
 
 	private static void RegisterBlock(EMBlock block)
@@ -52,6 +56,7 @@ public class BlockInit
 		RegisterRender(siliconProcessor);
 		RegisterRender(solarPanel);
 		RegisterRender(riceCrop);
+		RegisterRender(tinOre);
 	}
 
 	private static void RegisterRender(EMBlock block)
