@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "electricitymod:items/bronze_shovel"
+		"layer0": "electricitymod:items/bronze_sword"
 	}
 }

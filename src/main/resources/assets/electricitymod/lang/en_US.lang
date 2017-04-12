@@ -17,3 +17,6 @@ tile.concrete.name=Concrete
 tile.machine_silicon.name=Silicon Processor
 tile.machine_solar_panel.name=Solar Panel
 tile.rice_crop.name=Rice Crop
+
+tab.tabMachines=Electricity Mod Machines & Stuff
+tab.tabMachines.name=Electricity Mod Machines & Stuff
