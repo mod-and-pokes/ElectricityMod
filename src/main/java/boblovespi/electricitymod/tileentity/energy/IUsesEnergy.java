@@ -5,17 +5,21 @@ package boblovespi.electricitymod.tileentity.energy;
  */
 public interface IUsesEnergy
 {
-	public boolean hasEnoughEnergy();
+	boolean hasEnoughEnergy();
 
-	public boolean hasExcessEnergy();
+	boolean hasExcessEnergy();
 
-	public void UpdateConnections();
+	void UpdateConnections();
 
-	public boolean Ping(IUsesEnergy machine);
+	boolean Ping(IUsesEnergy machine);
 
-	public float getEnergyAmount();
+	void AddConnection(IUsesEnergy machine);
 
-	public void AddConnection(IUsesEnergy machine);
+	boolean RemoveConnection(IUsesEnergy machine);
 
-	public boolean RemoveConnection(IUsesEnergy machine);
+	boolean ReplyPing(IUsesEnergy machine);
+
+	float getEnergyUsed();
+
+	boolean AcceptEnergy
 }

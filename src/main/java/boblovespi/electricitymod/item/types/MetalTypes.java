@@ -2,6 +2,8 @@ package boblovespi.electricitymod.item.types;
 
 import net.minecraft.util.IStringSerializable;
 
+import javax.annotation.Nullable;
+
 /**
  * Created by Willi on 4/11/2017.
  */
@@ -34,7 +36,7 @@ public enum MetalTypes implements IStringSerializable, IMultiTypeEnum
 		return getName();
 	}
 
-	public static MetalTypes getType(int id)
+	@Nullable public static MetalTypes getType(int id)
 	{
 		for (MetalTypes t : MetalTypes.values())
 		{

@@ -27,5 +27,6 @@ public class OreDictionaryHandler
 		OreDictionary.registerOre("chipBasic", ItemInit.computerChip.toItem());
 		OreDictionary
 				.registerOre("plateSilicon", ItemInit.siliconPlate.toItem());
+		OreDictionary.registerOre("foodRice", ItemInit.riceGrain.toItem());
 	}
 }

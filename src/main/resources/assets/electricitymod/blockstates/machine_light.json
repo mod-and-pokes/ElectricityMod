@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "running=true": {
+      "model": "electricitymod:machine_light_on"
+    }
+  }
+}

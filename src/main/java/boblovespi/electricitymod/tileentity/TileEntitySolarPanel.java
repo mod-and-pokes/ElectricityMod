@@ -79,26 +79,35 @@ public class TileEntitySolarPanel extends TileEntity
 
 	@Override public void UpdateConnections()
 	{
+		usedPower = 0;
+		remainingPower = powerGenerated;
 
+		for (IUsesEnergy mac : connections)
+		{
+			if (!Ping(mac))
+			{
+				if (mac.RemoveConnection(this))
+				{
+					RemoveConnection(mac);
+					continue;
+				}
+				if (mac.getEnergyUsed() <= remainingPower)
+					usedPower -= mac.getEnergyUsed();
+				remainingPower = powerGenerated - usedPower;
+			}
+		}
 	}
 
 	@Override public boolean Ping(IUsesEnergy machine)
 	{
-		if (!connections.contains(machine))
-			return false;
-		return false;
-	}
-
-	@Override @Deprecated public float getEnergyAmount()
-	{
-		return remainingPower;
+		return machine.ReplyPing(this);
 	}
 
 	@Override public void AddConnection(IUsesEnergy machine)
 	{
 		if (!connections.contains(machine))
 			connections.add(machine);
-
+		machine.AddConnection(this);
 	}
 
 	@Override public boolean RemoveConnection(IUsesEnergy machine)
@@ -114,8 +123,23 @@ public class TileEntitySolarPanel extends TileEntity
 		return false;
 	}
 
+	@Override public boolean ReplyPing(IUsesEnergy machine)
+	{
+		return connections.contains(machine);
+	}
+
+	@Override public float getEnergyUsed()
+	{
+		return 0;
+	}
+
 	@Override public boolean RequestEnergy(float amount)
 	{
+		if (amount <= remainingPower)
+		{
+			remainingPower -= amount;
+			return true;
+		}
 		return false;
 	}
 

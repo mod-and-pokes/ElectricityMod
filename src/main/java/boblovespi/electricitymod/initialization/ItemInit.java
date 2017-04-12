@@ -2,11 +2,15 @@ package boblovespi.electricitymod.initialization;
 
 import boblovespi.electricitymod.ElectricityMod;
 import boblovespi.electricitymod.item.*;
+import boblovespi.electricitymod.util.Debug;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import scala.actors.threadpool.Arrays;
 
 /**
  * Created by Willi on 4/10/2017.
@@ -19,6 +23,8 @@ public class ItemInit
 	public static EMItem flatbread;
 	public static EMItem riceGrain;
 
+	public static EMItem chineseFood;
+
 	public static void Init()
 	{
 		SetNames();
@@ -27,6 +33,12 @@ public class ItemInit
 		siliconPlate = new SiliconPlate();
 		flatbread = new Flatbread();
 		riceGrain = new RiceGrain();
+
+		chineseFood = new EMFood("chinese_food", 12, 12, 72, false, false,
+				Arrays.asList(new PotionEffect[] {
+						new PotionEffect(Potion.getPotionById(9), 600, 0),
+						new PotionEffect(Potion.getPotionById(10), 600, 1) }),
+				Arrays.asList(new Float[] { 1f, 1f }));
 	}
 
 	private static void SetNames()
@@ -43,10 +55,12 @@ public class ItemInit
 		RegisterItem(siliconPlate);
 		RegisterItem(flatbread);
 		RegisterItem(riceGrain);
+		RegisterItem(chineseFood);
 	}
 
 	private static void RegisterItem(EMItem i)
 	{
+		Debug.DebugLog().info("Registering item: ", i.REGISTERY_NAME());
 		GameRegistry.register(i.toItem());
 	}
 
@@ -62,6 +76,7 @@ public class ItemInit
 		RegisterRender(flatbread, 0);
 
 		RegisterRender(riceGrain, 0);
+		RegisterRender(chineseFood, 0);
 	}
 
 	private static void RegisterRender(EMItem item, int meta)

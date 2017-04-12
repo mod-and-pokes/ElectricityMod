@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -36,6 +37,11 @@ public class CraftingInit
 				"tct", 'G', Blocks.GLASS, 't',
 				new ItemStack(ItemInit.ingot.toItem(), 1, 1), 'q', Items.QUARTZ,
 				'c', ItemInit.computerChip);
+		ShapelessOreRecipe chinese_food = new ShapelessOreRecipe(
+				ItemInit.chineseFood.toItem(), "foodRice", "foodRice",
+				"foodRice", "foodRice", "foodRice", "foodRice",
+				Blocks.BROWN_MUSHROOM, Items.BOWL, Items.COOKED_CHICKEN);
+		GameRegistry.addRecipe(chinese_food);
 
 		// Bronze
 		AddToolRecipies("ingotBronze", Items.STICK, ToolInit.bronzePickaxe,
