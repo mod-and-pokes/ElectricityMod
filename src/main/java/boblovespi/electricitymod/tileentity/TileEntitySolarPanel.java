@@ -84,7 +84,9 @@ public class TileEntitySolarPanel extends TileEntity
 
 	@Override public boolean Ping(IUsesEnergy machine)
 	{
-		return connections.contains(machine);
+		if (!connections.contains(machine))
+			return false;
+		return false;
 	}
 
 	@Override @Deprecated public float getEnergyAmount()

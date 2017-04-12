@@ -5,6 +5,7 @@ import boblovespi.electricitymod.initialization.CraftingInit;
 import boblovespi.electricitymod.initialization.ItemInit;
 import boblovespi.electricitymod.initialization.ToolInit;
 import boblovespi.electricitymod.proxy.CommonProxy;
+import boblovespi.electricitymod.util.OreDictionaryHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -54,6 +55,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 	{
 
 		//log.debug(MOD_ID + " is in preinitiaization");
+
+		OreDictionaryHandler.Register();
 
 		CraftingInit.Register();
 

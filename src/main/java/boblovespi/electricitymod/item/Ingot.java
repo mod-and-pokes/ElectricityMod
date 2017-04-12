@@ -2,6 +2,7 @@ package boblovespi.electricitymod.item;
 
 import boblovespi.electricitymod.item.types.MetalTypes;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 /**
  * Created by Willi on 4/10/2017.
  */
-public class Ingot extends Item implements IMulitTypable
+public class Ingot extends Item implements IMulitTypable, EMItem
 {
 	public Ingot()
 	{
@@ -32,6 +33,11 @@ public class Ingot extends Item implements IMulitTypable
 				"file path: " + UNLOCALIZED_NAME() + "_" + getType(meta));
 
 		return "ingot_" + getType(meta);
+	}
+
+	@Override public Item toItem()
+	{
+		return this;
 	}
 
 	@Override public String UNLOCALIZED_NAME()

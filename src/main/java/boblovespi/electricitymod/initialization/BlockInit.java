@@ -1,12 +1,13 @@
 package boblovespi.electricitymod.initialization;
 
-import boblovespi.electricitymod.block.Block;
 import boblovespi.electricitymod.block.Concrete;
+import boblovespi.electricitymod.block.EMBlock;
+import boblovespi.electricitymod.block.RiceCrop;
 import boblovespi.electricitymod.block.machine.BasicSolarPanel;
 import boblovespi.electricitymod.block.machine.SiliconProcessor;
-import boblovespi.electricitymod.item.Item;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -15,15 +16,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class BlockInit
 {
-	public static Block concrete;
-	public static Block siliconProcessor;
-	public static Block solarPanel;
+	public static EMBlock concrete;
+	public static EMBlock siliconProcessor;
+	public static EMBlock solarPanel;
+	public static EMBlock riceCrop;
 
 	public static void Init()
 	{
 		concrete = new Concrete();
 		siliconProcessor = new SiliconProcessor();
 		solarPanel = new BasicSolarPanel();
+		riceCrop = new RiceCrop();
 	}
 
 	public static void Register()
@@ -31,14 +34,15 @@ public class BlockInit
 		RegisterBlock(concrete);
 		RegisterBlock(siliconProcessor);
 		RegisterBlock(solarPanel);
+		RegisterBlock(riceCrop);
 	}
 
-	private static void RegisterBlock(Block block)
+	private static void RegisterBlock(EMBlock block)
 	{
-		GameRegistry.register(block);
-		net.minecraft.item.Item itemBlock = new ItemBlock(block);
+		GameRegistry.register(block.toBlock());
+		net.minecraft.item.Item itemBlock = new ItemBlock(block.toBlock());
 
-		itemBlock.setRegistryName(block.getRegistryName());
+		itemBlock.setRegistryName(block.toBlock().getRegistryName());
 		GameRegistry.register(itemBlock);
 	}
 
@@ -47,13 +51,15 @@ public class BlockInit
 		RegisterRender(concrete);
 		RegisterRender(siliconProcessor);
 		RegisterRender(solarPanel);
+		RegisterRender(riceCrop);
 	}
 
-	private static void RegisterRender(Block block)
+	private static void RegisterRender(EMBlock block)
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-				.register(Item.getItemFromBlock(block), 0,
-						new ModelResourceLocation(block.getRegistryName(),
+				.register(Item.getItemFromBlock(block.toBlock()), 0,
+						new ModelResourceLocation(
+								block.toBlock().getRegistryName(),
 								"inventory"));
 	}
 }
