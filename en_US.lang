@@ -1,0 +1,18 @@
+item.ingot.copper.name=Copper
+item.ingot.tin.name=Tin
+item.ingot.bronze.name=Bronze
+item.ingot.steel.name=Steel
+item.computer_chip.name=Computer Chip
+item.plate_silicon.name=Silicon Plate
+item.flatbread.name=Flatbread
+item.bronze_pickaxe.name=Bronze Pickaxe
+item.bronze_axe.name=Bronze Axe
+item.bronze_hoe.name=Bronze Hoe
+item.bronze_shovel.name=Bronze Shovel
+item.bronze_sword.name=Bronze Sword
+
+
+tile.concrete.name=Concrete
+tile.machine_silicon.name=Silicon Processor
+tile.machine_solar_panel.name=Solar Panel
+
