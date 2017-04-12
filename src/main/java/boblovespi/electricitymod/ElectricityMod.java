@@ -3,6 +3,7 @@ package boblovespi.electricitymod;
 import boblovespi.electricitymod.initialization.BlockInit;
 import boblovespi.electricitymod.initialization.CraftingInit;
 import boblovespi.electricitymod.initialization.ItemInit;
+import boblovespi.electricitymod.initialization.ToolInit;
 import boblovespi.electricitymod.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -38,7 +39,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 		ItemInit.Init();
 		ItemInit.Register();
-
+		
+		ToolInit.Init();
+		ToolInit.Register();
+		
 		BlockInit.Init();
 		BlockInit.Register();
 
