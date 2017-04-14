@@ -12,7 +12,7 @@ public enum MetalTypes implements IStringSerializable, IMultiTypeEnum
 	IRON("iron", -2), GOLD("gold", -1), COPPER("copper", 0), TIN("tin",
 		1), BRONZE("bronze", 2), STEEL("steel", 3);
 
-	private MetalTypes(String name, int id)
+	MetalTypes(String name, int id)
 	{
 		this.name = name;
 		this.id = id;

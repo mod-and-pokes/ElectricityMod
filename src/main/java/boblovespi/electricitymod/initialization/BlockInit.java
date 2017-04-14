@@ -1,9 +1,11 @@
 package boblovespi.electricitymod.initialization;
 
+import boblovespi.electricitymod.block.BlastFurnace;
 import boblovespi.electricitymod.block.Concrete;
 import boblovespi.electricitymod.block.EMBlock;
 import boblovespi.electricitymod.block.RiceCrop;
 import boblovespi.electricitymod.block.machine.BasicSolarPanel;
+import boblovespi.electricitymod.block.machine.PoweredLight;
 import boblovespi.electricitymod.block.machine.SiliconProcessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -20,6 +22,8 @@ public class BlockInit
 	public static EMBlock siliconProcessor;
 	public static EMBlock solarPanel;
 	public static EMBlock riceCrop;
+	public static EMBlock poweredLight;
+	public static EMBlock blastFurnace;
 
 	public static void Init()
 	{
@@ -27,6 +31,8 @@ public class BlockInit
 		siliconProcessor = new SiliconProcessor();
 		solarPanel = new BasicSolarPanel();
 		riceCrop = new RiceCrop();
+		poweredLight = new PoweredLight();
+		blastFurnace = new BlastFurnace();
 	}
 
 	public static void Register()
@@ -34,7 +40,10 @@ public class BlockInit
 		RegisterBlock(concrete);
 		RegisterBlock(siliconProcessor);
 		RegisterBlock(solarPanel);
-		RegisterBlock(riceCrop);
+		RegisterBlock(poweredLight);
+		RegisterBlock(blastFurnace);
+
+		RegisterOnlyBlock(riceCrop);
 	}
 
 	private static void RegisterBlock(EMBlock block)
@@ -46,11 +55,19 @@ public class BlockInit
 		GameRegistry.register(itemBlock);
 	}
 
+	private static void RegisterOnlyBlock(EMBlock block)
+	{
+		GameRegistry.register(block.toBlock());
+	}
+
 	public static void RegisterRenders()
 	{
 		RegisterRender(concrete);
 		RegisterRender(siliconProcessor);
 		RegisterRender(solarPanel);
+		RegisterRender(poweredLight);
+		RegisterRender(blastFurnace);
+
 		RegisterRender(riceCrop);
 	}
 

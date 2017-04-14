@@ -6,6 +6,7 @@ import boblovespi.electricitymod.util.Debug;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
@@ -22,8 +23,11 @@ public class ItemInit
 	public static EMItem siliconPlate;
 	public static EMItem flatbread;
 	public static EMItem riceGrain;
+	public static EMItem wireSpool;
 
 	public static EMItem chineseFood;
+	public static EMItem coalCoke;
+	public static EMItem slag;
 
 	public static void Init()
 	{
@@ -33,6 +37,9 @@ public class ItemInit
 		siliconPlate = new SiliconPlate();
 		flatbread = new Flatbread();
 		riceGrain = new RiceGrain();
+		wireSpool = new WireSpool();
+		coalCoke = new EMBaseItem("coal_coke", CreativeTabs.MATERIALS);
+		slag = new EMBaseItem("slag", CreativeTabs.MATERIALS);
 
 		chineseFood = new EMFood("chinese_food", 12, 12, 72, false, false,
 				Arrays.asList(new PotionEffect[] {
@@ -56,6 +63,9 @@ public class ItemInit
 		RegisterItem(flatbread);
 		RegisterItem(riceGrain);
 		RegisterItem(chineseFood);
+		RegisterItem(wireSpool);
+		RegisterItem(coalCoke);
+		RegisterItem(slag);
 	}
 
 	private static void RegisterItem(EMItem i)
@@ -77,6 +87,12 @@ public class ItemInit
 
 		RegisterRender(riceGrain, 0);
 		RegisterRender(chineseFood, 0);
+
+		RegisterRender(wireSpool, 0, wireSpool.getMetaFilePath(0));
+		RegisterRender(wireSpool, 1, wireSpool.getMetaFilePath(1));
+
+		RegisterRender(coalCoke, 0);
+		RegisterRender(slag, 0);
 	}
 
 	private static void RegisterRender(EMItem item, int meta)
@@ -130,6 +146,12 @@ public class ItemInit
 						ingot.getMetaFilePath(2)),
 				new ResourceLocation(ElectricityMod.MOD_ID,
 						ingot.getMetaFilePath(3)));
+
+		ModelBakery.registerItemVariants(wireSpool.toItem(),
+				new ResourceLocation(ElectricityMod.MOD_ID,
+						wireSpool.getMetaFilePath(0)),
+				new ResourceLocation(ElectricityMod.MOD_ID,
+						wireSpool.getMetaFilePath(1)));
 	}
 
 	/* TODO: private static void RegisterVariation()

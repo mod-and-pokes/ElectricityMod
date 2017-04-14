@@ -1,10 +1,8 @@
 package boblovespi.electricitymod;
 
-import boblovespi.electricitymod.initialization.BlockInit;
-import boblovespi.electricitymod.initialization.CraftingInit;
-import boblovespi.electricitymod.initialization.ItemInit;
-import boblovespi.electricitymod.initialization.ToolInit;
+import boblovespi.electricitymod.initialization.*;
 import boblovespi.electricitymod.proxy.CommonProxy;
+import boblovespi.electricitymod.util.ConfigLoader;
 import boblovespi.electricitymod.util.OreDictionaryHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -30,20 +28,20 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 	@SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS) public static CommonProxy proxy;
 
-
-
 	@Mod.EventHandler public void PreInit(FMLPreInitializationEvent e)
 	{
 		//Logger log = e.getModLog();
 
 		//log.debug(MOD_ID + " is in preinitiaization");
 
+		ConfigLoader.PreInit();
+
 		ItemInit.Init();
 		ItemInit.Register();
-		
+
 		ToolInit.Init();
 		ToolInit.Register();
-		
+
 		BlockInit.Init();
 		BlockInit.Register();
 
@@ -55,6 +53,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 	{
 
 		//log.debug(MOD_ID + " is in preinitiaization");
+
+		TileEntityInit.Init();
 
 		OreDictionaryHandler.Register();
 

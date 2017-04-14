@@ -7,7 +7,7 @@ import net.minecraft.util.ITickable;
  */
 public interface IRunnableMachine extends ITickable
 {
-	public boolean AttemptRun();
+	boolean AttemptRun();
 
-	public boolean IsRunning();
+	boolean IsRunning();
 }

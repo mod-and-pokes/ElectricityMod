@@ -11,7 +11,7 @@ public enum FoodTypes implements IStringSerializable, IMultiTypeEnum
 {
 	CHINESE_FOOD("chinese_food", 0);
 
-	private FoodTypes(String name, int id)
+	FoodTypes(String name, int id)
 	{
 		this.name = name;
 		this.id = id;

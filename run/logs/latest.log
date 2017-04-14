@@ -1,28 +1,29 @@
-[15:18:52] [Client thread/INFO]: Setting user: Player918
-[15:18:58] [Client thread/WARN]: Skipping bad option: lastServer:
-[15:18:58] [Client thread/INFO]: LWJGL Version: 2.9.4
-[15:19:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[15:19:09] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[15:19:10] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[15:19:10] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[15:19:10] [Thread-8/INFO]: OpenAL initialized.
-[15:19:10] [Sound Library Loader/INFO]: Sound engine started
-[15:19:14] [Client thread/INFO]: Created: 16x16 textures-atlas
-[15:19:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[15:19:19] [Client thread/INFO]: SoundSystem shutting down...
-[15:19:19] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[15:19:19] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[15:19:20] [Thread-10/INFO]: Initializing LWJGL OpenAL
-[15:19:20] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[15:19:20] [Thread-10/INFO]: OpenAL initialized.
-[15:19:20] [Sound Library Loader/INFO]: Sound engine started
-[15:19:23] [Client thread/INFO]: Created: 512x512 textures-atlas
-[15:19:25] [Client thread/WARN]: Skipping bad option: lastServer:
-[15:19:32] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
-[15:19:32] [Server thread/INFO]: Generating keypair
-[15:19:33] [Server thread/INFO]: Preparing start region for level 0
-[15:19:34] [Server thread/INFO]: Changing view distance to 12, from 10
-[15:20:10] [Client thread/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@11e88710[id=7fac0f4d-6ee9-33e9-a874-7b4a3cc238c6,name=Player918,properties={},legacy=false]
+[18:41:08] [Client thread/INFO]: Setting user: Player375
+[18:41:14] [Client thread/WARN]: Skipping bad option: lastServer:
+[18:41:14] [Client thread/INFO]: LWJGL Version: 2.9.4
+[18:41:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[18:41:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:41:22] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[18:41:22] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:41:22] [Thread-8/INFO]: OpenAL initialized.
+[18:41:23] [Sound Library Loader/INFO]: Sound engine started
+[18:41:27] [Client thread/INFO]: Created: 16x16 textures-atlas
+[18:41:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[18:41:32] [Client thread/INFO]: SoundSystem shutting down...
+[18:41:32] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:41:32] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:41:32] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[18:41:32] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:41:32] [Thread-10/INFO]: OpenAL initialized.
+[18:41:33] [Sound Library Loader/INFO]: Sound engine started
+[18:41:36] [Client thread/INFO]: Created: 512x512 textures-atlas
+[18:41:37] [Client thread/WARN]: Skipping bad option: lastServer:
+[18:51:55] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[18:51:55] [Server thread/INFO]: Generating keypair
+[18:51:56] [Server thread/INFO]: Preparing start region for level 0
+[18:51:56] [Server thread/WARN]: Skipping BlockEntity with id electricitymodboblovespi.electricitymod.tileentity.TileEntitySolarPanel
+[18:51:57] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:52:33] [Client thread/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@1fc3d3ec[id=3bdd7bc1-57b3-3ed1-a14e-cc7341dec1b1,name=Player375,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:71) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
@@ -86,15 +87,13 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[HttpAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[YggdrasilAuthenticationService.class:?]
 	... 28 more
-[15:20:11] [Server thread/INFO]: Player918[local:E:5dd8122c] logged in with entity id 44 at (713.8676990054876, 56.0, -439.00712670572653)
-[15:20:11] [Server thread/INFO]: Player918 joined the game
-[15:20:12] [Server thread/INFO]: Saving and pausing game...
-[15:20:12] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[15:20:12] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[15:20:12] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[15:20:16] [Server thread/INFO]: Player918 has just earned the achievement [Taking Inventory]
-[15:20:16] [Client thread/INFO]: [CHAT] Player918 has just earned the achievement [Taking Inventory]
-[15:20:28] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@732b0ff8[id=7fac0f4d-6ee9-33e9-a874-7b4a3cc238c6,name=Player918,properties={},legacy=false]
+[18:52:34] [Server thread/INFO]: Player375[local:E:340c42ba] logged in with entity id 44 at (704.3000000119209, 56.0, -456.30000001192093)
+[18:52:34] [Server thread/INFO]: Player375 joined the game
+[18:52:36] [Server thread/INFO]: Saving and pausing game...
+[18:52:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[18:52:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[18:52:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[18:52:51] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@b9bcb01[id=3bdd7bc1-57b3-3ed1-a14e-cc7341dec1b1,name=Player375,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:71) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
@@ -149,32 +148,20 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[HttpAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[YggdrasilAuthenticationService.class:?]
 	... 19 more
-[15:21:51] [Server thread/INFO]: [Player918: Set own game mode to Survival Mode]
-[15:21:51] [Client thread/INFO]: [CHAT] Your game mode has been updated to Survival Mode
-[15:24:12] [Server thread/INFO]: [Player918: Given Hunger (ID 17) * 10 to Player918 for 1 seconds]
-[15:24:12] [Client thread/INFO]: [CHAT] Given Hunger (ID 17) * 10 to Player918 for 1 seconds
-[15:24:15] [Server thread/INFO]: [Player918: Given Hunger (ID 17) * 100 to Player918 for 1 seconds]
-[15:24:15] [Client thread/INFO]: [CHAT] Given Hunger (ID 17) * 100 to Player918 for 1 seconds
-[15:24:22] [Server thread/INFO]: [Player918: Given Hunger (ID 17) * 100 to Player918 for 1 seconds]
-[15:24:22] [Client thread/INFO]: [CHAT] Given Hunger (ID 17) * 100 to Player918 for 1 seconds
-[15:24:23] [Server thread/INFO]: [Player918: Given Hunger (ID 17) * 100 to Player918 for 1 seconds]
-[15:24:23] [Client thread/INFO]: [CHAT] Given Hunger (ID 17) * 100 to Player918 for 1 seconds
-[15:24:23] [Server thread/INFO]: [Player918: Given Hunger (ID 17) * 100 to Player918 for 1 seconds]
-[15:24:23] [Client thread/INFO]: [CHAT] Given Hunger (ID 17) * 100 to Player918 for 1 seconds
-[15:25:14] [Server thread/INFO]: [Player918: Set own game mode to Creative Mode]
-[15:25:14] [Client thread/INFO]: [CHAT] Your game mode has been updated to Creative Mode
-[15:33:20] [Client thread/INFO]: [CHAT] Usage: /give <player> <item> [amount] [data] [dataTag]
-[15:33:26] [Client thread/INFO]: [CHAT] Usage: /give <player> <item> [amount] [data] [dataTag]
-[15:33:42] [Server thread/INFO]: Saving and pausing game...
-[15:33:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[15:33:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[15:33:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[15:33:42] [Server thread/INFO]: Stopping server
-[15:33:42] [Server thread/INFO]: Saving players
-[15:33:42] [Server thread/INFO]: Saving worlds
-[15:33:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[15:33:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[15:33:42] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[15:33:45] [Client thread/INFO]: Stopping!
-[15:33:45] [Client thread/INFO]: SoundSystem shutting down...
-[15:33:45] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:55:05] [Server thread/INFO]: Saving and pausing game...
+[18:55:05] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[18:55:05] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[18:55:05] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[18:55:13] [Server thread/INFO]: Saving and pausing game...
+[18:55:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[18:55:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[18:55:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[18:55:14] [Server thread/INFO]: Stopping server
+[18:55:14] [Server thread/INFO]: Saving players
+[18:55:14] [Server thread/INFO]: Saving worlds
+[18:55:14] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[18:55:14] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[18:55:14] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[18:55:16] [Client thread/INFO]: Stopping!
+[18:55:16] [Client thread/INFO]: SoundSystem shutting down...
+[18:55:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

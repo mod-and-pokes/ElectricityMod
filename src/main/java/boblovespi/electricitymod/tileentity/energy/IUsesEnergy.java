@@ -3,7 +3,7 @@ package boblovespi.electricitymod.tileentity.energy;
 /**
  * Created by Willi on 4/11/2017.
  */
-public interface IUsesEnergy
+@Deprecated public interface IUsesEnergy
 {
 	boolean hasEnoughEnergy();
 
@@ -21,5 +21,7 @@ public interface IUsesEnergy
 
 	float getEnergyUsed();
 
-	boolean AcceptEnergy
+	void AcceptEnergy();
+
+	void DeclineEnergy();
 }

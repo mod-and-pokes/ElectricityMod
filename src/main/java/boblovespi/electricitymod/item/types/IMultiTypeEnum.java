@@ -5,9 +5,9 @@ package boblovespi.electricitymod.item.types;
  */
 public interface IMultiTypeEnum
 {
-	public String getName();
+	String getName();
 
-	public int getId();
+	int getId();
 
 	// public static IMultiTypeEnum getType(int id);
 }

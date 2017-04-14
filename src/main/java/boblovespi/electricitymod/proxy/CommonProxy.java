@@ -5,7 +5,7 @@ package boblovespi.electricitymod.proxy;
  */
 public interface CommonProxy
 {
-	public void PreInit();
+	void PreInit();
 
-	public void Init();
+	void Init();
 }

@@ -1,13 +1,12 @@
 package boblovespi.electricitymod.tileentity;
 
-import boblovespi.electricitymod.tileentity.energy.IProducesEnergy;
-import boblovespi.electricitymod.tileentity.energy.IUsesEnergy;
+import boblovespi.electricitymod.energy.EnergyNetwork;
+import boblovespi.electricitymod.energy.IProducesEnergy;
+import boblovespi.electricitymod.energy.IUsesEnergy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.EnumSkyBlock;
-
-import java.util.List;
 
 /**
  * Created by Willi on 4/11/2017.
@@ -16,13 +15,11 @@ public class TileEntitySolarPanel extends TileEntity
 		implements IRunnableMachine, IProducesEnergy
 {
 
-	private List<IUsesEnergy> connections;
+	private EnergyNetwork network = null;
 
 	private boolean canSeeSky = false;
 
 	private float powerGenerated = 0f;
-	private float usedPower = 0f;
-	private float remainingPower = 0f;
 
 	private int timer = 20;
 
@@ -64,92 +61,28 @@ public class TileEntitySolarPanel extends TileEntity
 			powerGenerated = worldObj.isDaytime() ? light * light / 10 : 2;
 		else
 			powerGenerated = 0;
-
+		if (network != null)
+			network.RecalculatePower();
 	}
 
-	@Override public boolean hasEnoughEnergy()
+	@Override public EnergyNetwork getNetwork()
 	{
-		return false;
+		return network;
 	}
 
-	@Override public boolean hasExcessEnergy()
+	@Override public IUsesEnergy setNetwork(EnergyNetwork network)
+	{
+		this.network = network;
+		return this;
+	}
+
+	@Override public boolean isActive()
 	{
 		return true;
 	}
 
-	@Override public void UpdateConnections()
-	{
-		usedPower = 0;
-		remainingPower = powerGenerated;
-
-		for (IUsesEnergy mac : connections)
-		{
-			if (!Ping(mac))
-			{
-				if (mac.RemoveConnection(this))
-				{
-					RemoveConnection(mac);
-					continue;
-				}
-				if (mac.getEnergyUsed() <= remainingPower)
-					usedPower -= mac.getEnergyUsed();
-				remainingPower = powerGenerated - usedPower;
-			}
-		}
-	}
-
-	@Override public boolean Ping(IUsesEnergy machine)
-	{
-		return machine.ReplyPing(this);
-	}
-
-	@Override public void AddConnection(IUsesEnergy machine)
-	{
-		if (!connections.contains(machine))
-			connections.add(machine);
-		machine.AddConnection(this);
-	}
-
-	@Override public boolean RemoveConnection(IUsesEnergy machine)
-	{
-		if (connections.contains(machine))
-		{
-			if (connections.remove(machine))
-			{
-				machine.UpdateConnections();
-				UpdateConnections();
-			}
-		}
-		return false;
-	}
-
-	@Override public boolean ReplyPing(IUsesEnergy machine)
-	{
-		return connections.contains(machine);
-	}
-
-	@Override public float getEnergyUsed()
-	{
-		return 0;
-	}
-
-	@Override public boolean RequestEnergy(float amount)
-	{
-		if (amount <= remainingPower)
-		{
-			remainingPower -= amount;
-			return true;
-		}
-		return false;
-	}
-
-	@Override public float GetTotalEnergyAmount()
+	@Override public float getEnergyProduction()
 	{
 		return powerGenerated;
-	}
-
-	@Override public float GetRemainingEnergyAmount()
-	{
-		return remainingPower;
 	}
 }

@@ -7,11 +7,11 @@ import net.minecraft.block.Block;
  */
 public interface EMBlock
 {
-	public String UNLOCALIZED_NAME();
+	String UNLOCALIZED_NAME();
 
-	public String REGISTERY_NAME();
+	String REGISTERY_NAME();
 
-	public String getMetaFilePath(int meta);
+	String getMetaFilePath(int meta);
 
 	Block toBlock();
 }

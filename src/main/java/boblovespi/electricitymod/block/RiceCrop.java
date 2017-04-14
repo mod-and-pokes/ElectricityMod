@@ -8,11 +8,12 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
@@ -73,10 +74,7 @@ public class RiceCrop extends BlockBush implements IGrowable, EMBlock
 
 	private boolean isMaxAge(IBlockState state)
 	{
-		if (state.getValue(Age) == MaxAge())
-			return true;
-		else
-			return false;
+		return state.getValue(Age) == MaxAge();
 	}
 
 	@Override public boolean canUseBonemeal(World world, Random random,
@@ -96,7 +94,8 @@ public class RiceCrop extends BlockBush implements IGrowable, EMBlock
 
 	@Override protected boolean canSustainBush(IBlockState state)
 	{
-		return state.getBlock() == Blocks.FARMLAND;
+		return state.getBlock() == Blocks.WATER
+				|| state.getBlock() == Blocks.FLOWING_WATER;
 	}
 
 	@Override protected BlockStateContainer createBlockState()
@@ -112,7 +111,7 @@ public class RiceCrop extends BlockBush implements IGrowable, EMBlock
 		if (isMaxAge(state))
 		{
 			drops.add(new ItemStack(ItemInit.riceGrain.toItem(),
-					(int) (Math.random() * 3)));
+					(int) (Math.random() * 4)));
 		}
 		drops.add(new ItemStack(ItemInit.riceGrain.toItem()));
 
@@ -154,6 +153,15 @@ public class RiceCrop extends BlockBush implements IGrowable, EMBlock
 	{
 		super.updateTick(worldIn, pos, state, rand);
 
+		if (worldIn.getBlockState(pos.down()).getBlock() != Blocks.WATER
+				&& worldIn.getBlockState(pos.down()).getBlock()
+				!= Blocks.FLOWING_WATER)
+		{
+			worldIn.setBlockToAir(pos);
+			dropBlockAsItem(worldIn, pos, state, 0);
+			return;
+		}
+
 		if (worldIn.getLightFromNeighbors(pos.up()) >= 9)
 		{
 			int i = getAge(state);
@@ -178,31 +186,45 @@ public class RiceCrop extends BlockBush implements IGrowable, EMBlock
 		float chance = 0;
 
 		BlockPos d = pos.down();
-		if (w.getBlockState(d).getBlock()
-				.canSustainPlant(w.getBlockState(pos), w, pos, EnumFacing.UP,
-						riceCrop))
-			chance += 3;
+		if (w.getBlockState(d).getBlock() == Blocks.WATER
+				|| w.getBlockState(d).getBlock() == Blocks.FLOWING_WATER)
+			chance += 1;
 		else
 			return 0;
 
-		BlockPos eD = d.east(), wD = d.west(), nD = d.north(), sD = d.south();
+		for (int x = -2; x < 3; ++x)
+		{
+			for (int y = -2; y < 3; ++y)
+			{
+				if (w.getBlockState(d.add(x, 0, y)) == Blocks.WATER)
+					chance += 0.5;
+				if (w.getBlockState(d.add(x, 0, y)) == Blocks.FLOWING_WATER)
 
-		if (w.getBlockState(eD).getBlock() == Blocks.WATER
-				|| w.getBlockState(eD).getBlock() == Blocks.FLOWING_WATER)
-			chance += 2;
-		if (w.getBlockState(wD).getBlock() == Blocks.WATER
-				|| w.getBlockState(wD).getBlock() == Blocks.FLOWING_WATER)
-			chance += 2;
-		if (w.getBlockState(sD).getBlock() == Blocks.WATER
-				|| w.getBlockState(sD).getBlock() == Blocks.FLOWING_WATER)
-			chance += 2;
-		if (w.getBlockState(sD).getBlock() == Blocks.WATER
-				|| w.getBlockState(nD).getBlock() == Blocks.FLOWING_WATER)
-			chance += 2;
+					chance += 0.3;
 
-		if (w.getBlockState(d).getBlock().isFertile(w, d))
-			chance += 4;
+				if (w.getBlockState(d.add(x, -1, y)) == Blocks.DIRT
+						|| w.getBlockState(d.add(x, -1, y)) == Blocks.SAND
+						|| w.getBlockState(d.add(x, -1, y)) == Blocks.GRAVEL)
+					chance += 0.2;
+			}
+		}
 
 		return chance;
 	}
+
+	@Override public ItemStack getPickBlock(IBlockState state,
+			RayTraceResult target, World world, BlockPos pos,
+			EntityPlayer player)
+	{
+		return new ItemStack(ItemInit.riceGrain.toItem());
+
+	}
+
+	//	@Override public boolean canSustainPlant(IBlockState state,
+	//			IBlockAccess world, BlockPos pos, EnumFacing direction,
+	//			IPlantable plantable)
+	//	{
+	//		if(plantable.getPlant(world, pos) instanceof RiceGrain)
+	//			return this
+	//	}
 }

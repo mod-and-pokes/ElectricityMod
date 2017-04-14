@@ -6,9 +6,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 /**
  * Created by Willi on 4/12/2017.
@@ -21,6 +25,10 @@ public class PoweredLight extends Block implements ITileEntityProvider, EMBlock
 	public PoweredLight()
 	{
 		super(Material.REDSTONE_LIGHT);
+		setRegistryName(REGISTERY_NAME());
+		setUnlocalizedName(UNLOCALIZED_NAME());
+		setDefaultState(blockState.getBaseState()
+				.withProperty(IsActivated, Boolean.FALSE));
 	}
 
 	@Override public String UNLOCALIZED_NAME()
@@ -48,10 +56,32 @@ public class PoweredLight extends Block implements ITileEntityProvider, EMBlock
 		return new TileEntityPoweredLight(meta == 0);
 	}
 
-	public void ToggleLight()
+	private void LightOn()
 	{
-		getDefaultState().withProperty(IsActivated,
-				!getBlockState().getBaseState().getValue(IsActivated));
+		getDefaultState().withProperty(IsActivated, true);
+		setLightLevel(1);
+	}
+
+	private void LightOff()
+	{
+		getDefaultState().withProperty(IsActivated, false);
+		setLightLevel(0);
+	}
+
+	@Override public void updateTick(World worldIn, BlockPos pos,
+			IBlockState state, Random rand)
+	{
+		if (worldIn.isRemote)
+			return;
+		if (worldIn.getTileEntity(pos) != null && worldIn
+				.getTileEntity(pos) instanceof TileEntityPoweredLight)
+		{
+			if (((TileEntityPoweredLight) worldIn.getTileEntity(pos)).isOn)
+				LightOn();
+			else
+				LightOff();
+
+		}
 	}
 
 	@Override public IBlockState getStateFromMeta(int meta)
@@ -63,4 +93,15 @@ public class PoweredLight extends Block implements ITileEntityProvider, EMBlock
 	{
 		return state.getValue(IsActivated) ? 1 : 0;
 	}
+
+	@Override public BlockStateContainer getBlockState()
+	{
+		return super.getBlockState();
+	}
+
+	@Override protected BlockStateContainer createBlockState()
+	{
+		return new BlockStateContainer(this, IsActivated);
+	}
+
 }

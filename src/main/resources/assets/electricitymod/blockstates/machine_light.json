@@ -2,6 +2,9 @@
   "variants": {
     "running=true": {
       "model": "electricitymod:machine_light_on"
+    },
+    "running=false": {
+      "model": "electricitymod:machine_light_off"
     }
   }
 }

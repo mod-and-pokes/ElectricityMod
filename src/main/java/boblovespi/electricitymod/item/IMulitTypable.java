@@ -5,5 +5,5 @@ package boblovespi.electricitymod.item;
  */
 public interface IMulitTypable
 {
-	public String getType(int meta);
+	String getType(int meta);
 }

@@ -6,6 +6,7 @@ item.computer_chip.name=Computer Chip
 item.plate_silicon.name=Silicon Plate
 item.flatbread.name=Flatbread
 item.rice.name=Rice
+item.chinese_food.name=Chinese Food
 
 item.bronze_axe.name=Bronze Axe
 item.bronze_hoe.name=Bronze Hoe
@@ -17,3 +18,5 @@ tile.concrete.name=Concrete
 tile.machine_silicon.name=Silicon Processor
 tile.machine_solar_panel.name=Solar Panel
 tile.rice_crop.name=Rice Crop
+
+itemGroup.tabMachines=Electricity Mod Machines & Stuff

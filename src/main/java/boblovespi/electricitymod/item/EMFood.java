@@ -103,7 +103,7 @@ public class EMFood extends Item implements EMItem
 		{
 			for (int i = 0; i < potionEffectss.size(); ++i)
 			{
-				if (worldIn.rand.nextFloat() > potionEffectChances.get(i))
+				if (worldIn.rand.nextFloat() <= potionEffectChances.get(i))
 					player.addPotionEffect(
 							new PotionEffect(potionEffectss.get(i)));
 			}
@@ -126,7 +126,7 @@ public class EMFood extends Item implements EMItem
 					SoundCategory.PLAYERS, 0.5F,
 					worldIn.rand.nextFloat() * 0.1F + 0.9F);
 
-			this.onFoodEaten(stack, worldIn, entityplayer);
+			onFoodEaten(stack, worldIn, entityplayer);
 			// entityplayer.addStat(StatList.getObjectUseStats(this));
 		}
 

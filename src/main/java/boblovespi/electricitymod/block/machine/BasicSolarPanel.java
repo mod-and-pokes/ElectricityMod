@@ -40,6 +40,8 @@ public class BasicSolarPanel extends Block
 		setRegistryName(REGISTERY_NAME());
 		setUnlocalizedName(UNLOCALIZED_NAME());
 		setCreativeTab(MachineTab.MACHINE_TAB);
+		setHardness(1);
+		setResistance(3);
 	}
 
 	@Override public String UNLOCALIZED_NAME()
@@ -113,5 +115,19 @@ public class BasicSolarPanel extends Block
 			@Nullable Entity ent)
 	{
 		addCollisionBoxToList(pos, bb, aabb, boundingBox);
+	}
+
+	@Override public boolean isSideSolid(IBlockState base_state,
+			IBlockAccess world, BlockPos pos, EnumFacing side)
+	{
+		switch (side)
+		{
+		case DOWN:
+			return true;
+		case UP:
+			return true;
+		default:
+			return false;
+		}
 	}
 }

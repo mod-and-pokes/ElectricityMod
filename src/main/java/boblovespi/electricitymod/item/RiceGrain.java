@@ -58,7 +58,8 @@ public class RiceGrain extends Item implements IPlantable, EMItem
 	@Override public EnumPlantType getPlantType(IBlockAccess iBlockAccess,
 			BlockPos blockPos)
 	{
-		return EnumPlantType.Crop;
+		return EnumPlantType.Water;
+		// return EnumPlantType.Crop;
 	}
 
 	@Override public IBlockState getPlant(IBlockAccess iBlockAccess,
@@ -71,15 +72,16 @@ public class RiceGrain extends Item implements IPlantable, EMItem
 			EntityPlayer player, World world, BlockPos pos, EnumHand hand,
 			EnumFacing facing, float dir, float x, float y)
 	{
-		IBlockState state = world.getBlockState(pos);
+		IBlockState state = world.getBlockState(pos.up());
 
 		if (facing == EnumFacing.UP && player
 				.canPlayerEdit(pos.offset(facing), facing, items) && state
 				.getBlock()
-				.canSustainPlant(state, world, pos, EnumFacing.UP, this)
-				&& world.isAirBlock(pos.up()))
+				.canSustainPlant(state, world, pos.up(), EnumFacing.UP, this)
+				&& world.isAirBlock(pos.up(2)))
 		{
-			world.setBlockState(pos.up(), BlockInit.riceCrop.toBlock().getDefaultState());
+			world.setBlockState(pos.up(2),
+					BlockInit.riceCrop.toBlock().getDefaultState());
 			--items.stackSize;
 
 			return EnumActionResult.SUCCESS;
