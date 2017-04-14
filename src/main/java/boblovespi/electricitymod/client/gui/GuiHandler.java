@@ -31,7 +31,7 @@ public class GuiHandler implements IGuiHandler
 	{
 		if (ID == BLAST_FURNACE)
 		{
-			return new GuiBlastFurncae(player.inventory,
+			return new GuiBlastFurnace(player.inventory,
 					(TileEntityBlastFurnace) world
 							.getTileEntity(new BlockPos(x, y, z)));
 		}

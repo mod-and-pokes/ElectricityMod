@@ -2,6 +2,8 @@ package boblovespi.electricitymod.tileentity;
 
 import boblovespi.electricitymod.initialization.ItemInit;
 import boblovespi.electricitymod.util.ConfigLoader;
+import boblovespi.electricitymod.util.FuelHandler;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -38,7 +40,7 @@ public class TileEntityBlastFurnace extends TileEntity
 	private float fuelBurnTime = 200; // the amount of time a new piece of the same fuel would burn
 
 	private float smeltTime; // the remaining time for the ingot to smelt to steel
-	// private static final float steelSmeltTime = ConfigLoader.BLAST_FURNACE_smeltTime; // the amount of time it takes to smelt steel
+	private float steelSmeltTime; // the amount of time it takes to smelt steel
 	// private static final float smeltTimeScalar = ConfigLoader.BLAST_FURNACE_smeltSpeedScalar;
 	// private static final float burnTimeScalar = ConfigLoader.BLAST_FURNACE_burnSpeedScalar;
 
@@ -54,7 +56,7 @@ public class TileEntityBlastFurnace extends TileEntity
 		isBurning = compound.getBoolean("isBurning");
 
 		smeltTime = compound.getInteger("smeltTime");
-		// fuelBurnTime = compound.getInteger("fuelBurnTime");
+		steelSmeltTime = compound.getInteger("steelSmeltTime");
 		isSmelting = compound.getBoolean("isSmelting");
 
 		itemHandler.deserializeNBT(compound.getCompoundTag("itemHandler"));
@@ -69,7 +71,7 @@ public class TileEntityBlastFurnace extends TileEntity
 		compound.setBoolean("isBurning", isBurning);
 
 		compound.setInteger("smeltTime", (int) smeltTime);
-		// compound.setInteger("fuelBurnTime", fuelBurnTime);
+		compound.setInteger("steelSmeltTime", (int) steelSmeltTime);
 		compound.setBoolean("isSmelting", isSmelting);
 
 		compound.setTag("itemHandler", itemHandler.serializeNBT());
@@ -81,6 +83,7 @@ public class TileEntityBlastFurnace extends TileEntity
 	{
 		if (worldObj.isRemote)
 			return;
+		steelSmeltTime = ConfigLoader.BLAST_FURNACE_smeltTime;
 		if (isSmelting)
 		{
 			if (isBurning)
@@ -106,11 +109,17 @@ public class TileEntityBlastFurnace extends TileEntity
 			{
 				if (itemHandler.getStackInSlot(COKE_SLOTS[0]) != null)
 				{
+					fuelBurnTime = new FuelHandler().getBurnTime(
+							itemHandler.getStackInSlot(COKE_SLOTS[0]));
+
 					itemHandler.extractItem(COKE_SLOTS[0], 1, false);
 					burnTime = fuelBurnTime;
 					isBurning = true;
 				} else if (itemHandler.getStackInSlot(COKE_SLOTS[1]) != null)
 				{
+					fuelBurnTime = new FuelHandler().getBurnTime(
+							itemHandler.getStackInSlot(COKE_SLOTS[0]));
+
 					itemHandler.extractItem(COKE_SLOTS[1], 1, false);
 					burnTime = fuelBurnTime;
 					isBurning = true;
@@ -120,7 +129,8 @@ public class TileEntityBlastFurnace extends TileEntity
 							+ 10 * ConfigLoader.BLAST_FURNACE_smeltSpeedScalar
 							> ConfigLoader.BLAST_FURNACE_smeltTime ?
 							ConfigLoader.BLAST_FURNACE_smeltTime :
-							smeltTime + 10;
+							smeltTime + 10
+									* ConfigLoader.BLAST_FURNACE_smeltSpeedScalar;
 				}
 			}
 		} else if (isBurning)
@@ -152,7 +162,9 @@ public class TileEntityBlastFurnace extends TileEntity
 				isSmelting = true;
 			}
 		}
-
+		markDirty();
+		IBlockState state = worldObj.getBlockState(pos);
+		worldObj.notifyBlockUpdate(pos, state, state,3);
 	}
 
 	@Nullable @Override public SPacketUpdateTileEntity getUpdatePacket()
@@ -202,5 +214,30 @@ public class TileEntityBlastFurnace extends TileEntity
 		if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			return true;
 		return super.hasCapability(capability, facing);
+	}
+
+	public boolean isBurning()
+	{
+		return isBurning;
+	}
+
+	public float getLastBurnTime()
+	{
+		return fuelBurnTime;
+	}
+
+	public float getRemainingBurnTime()
+	{
+		return burnTime;
+	}
+
+	public float getCurrentSmeltTime()
+	{
+		return smeltTime;
+	}
+
+	public float getTotalSmeltTime()
+	{
+		return steelSmeltTime;
 	}
 }

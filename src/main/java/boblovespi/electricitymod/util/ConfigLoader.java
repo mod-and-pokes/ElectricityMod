@@ -99,6 +99,7 @@ public class ConfigLoader
 		List<String> propertyOrderBlastFurnace = new ArrayList<String>();
 		propertyOrderBlastFurnace.add(propertyCookSpeedScalar.getName());
 		propertyOrderBlastFurnace.add(propertyBurnSpeedScalar.getName());
+		propertyOrderBlastFurnace.add(propertySteelSmeltTime.getName());
 		config.setCategoryPropertyOrder(CATEGORY_NAME_BLAST_FURNACE,
 				propertyOrderBlastFurnace);
 
@@ -113,6 +114,7 @@ public class ConfigLoader
 
 		propertyBurnSpeedScalar.set(BLAST_FURNACE_burnSpeedScalar);
 		propertyCookSpeedScalar.set(BLAST_FURNACE_smeltSpeedScalar);
+		propertySteelSmeltTime.set(BLAST_FURNACE_smeltTime);
 
 		if (config.hasChanged())
 			config.save();
@@ -123,7 +125,7 @@ public class ConfigLoader
 		@SubscribeEvent(priority = EventPriority.LOWEST) public void onEvent(
 				ConfigChangedEvent.OnConfigChangedEvent e)
 		{
-			if (e.getModID() == ElectricityMod.MOD_ID)
+			if (e.getModID().equals(ElectricityMod.MOD_ID))
 				SyncFromGui();
 		}
 	}

@@ -9,6 +9,7 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -21,11 +22,12 @@ import java.util.Arrays;
 public class ContainerBlastFurnace extends Container
 {
 	TileEntityBlastFurnace te;
+	IItemHandler handler;
 
 	public ContainerBlastFurnace(IInventory playerInv,
 			TileEntityBlastFurnace te)
 	{
-		IItemHandler handler = te
+		handler = te
 				.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY,
 						null);
 
@@ -72,6 +74,37 @@ public class ContainerBlastFurnace extends Container
 	@Override public boolean canInteractWith(EntityPlayer playerIn)
 	{
 		return !playerIn.isSpectator();
+	}
+
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer playerIn, int fromSlot) {
+		ItemStack previous = null;
+		Slot slot = (Slot) this.inventorySlots.get(fromSlot);
+
+		if (slot != null && slot.getHasStack()) {
+			ItemStack current = slot.getStack();
+			previous = current.copy();
+
+			if (fromSlot < this.handler.getSlots()) {
+				// From the block breaker inventory to player's inventory
+				if (!this.mergeItemStack(current, handler.getSlots(), handler.getSlots() + 36, true))
+					return null;
+			} else {
+				// From the player's inventory to block breaker's inventory
+				if (!this.mergeItemStack(current, 0, handler.getSlots(), false))
+					return null;
+			}
+
+			if (current.stackSize == 0) //Use func_190916_E() instead of stackSize 1.11 only 1.11.2 use getCount()
+				slot.putStack(null); //Use ItemStack.field_190927_a instead of (ItemStack)null for a blank item stack. In 1.11.2 use ItemStack.EMPTY
+			else
+				slot.onSlotChanged();
+
+			if (current.stackSize == previous.stackSize)
+				return null;
+			slot.onPickupFromSlot(playerIn, current);
+		}
+		return previous;
 	}
 
 }

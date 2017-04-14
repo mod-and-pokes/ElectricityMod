@@ -1,101 +1,38 @@
-[18:41:08] [Client thread/INFO]: Setting user: Player375
-[18:41:14] [Client thread/WARN]: Skipping bad option: lastServer:
-[18:41:14] [Client thread/INFO]: LWJGL Version: 2.9.4
-[18:41:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[18:41:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:41:22] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[18:41:22] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:41:22] [Thread-8/INFO]: OpenAL initialized.
-[18:41:23] [Sound Library Loader/INFO]: Sound engine started
-[18:41:27] [Client thread/INFO]: Created: 16x16 textures-atlas
-[18:41:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[18:41:32] [Client thread/INFO]: SoundSystem shutting down...
-[18:41:32] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[18:41:32] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:41:32] [Thread-10/INFO]: Initializing LWJGL OpenAL
-[18:41:32] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:41:32] [Thread-10/INFO]: OpenAL initialized.
-[18:41:33] [Sound Library Loader/INFO]: Sound engine started
-[18:41:36] [Client thread/INFO]: Created: 512x512 textures-atlas
-[18:41:37] [Client thread/WARN]: Skipping bad option: lastServer:
-[18:51:55] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
-[18:51:55] [Server thread/INFO]: Generating keypair
-[18:51:56] [Server thread/INFO]: Preparing start region for level 0
-[18:51:56] [Server thread/WARN]: Skipping BlockEntity with id electricitymodboblovespi.electricitymod.tileentity.TileEntitySolarPanel
-[18:51:57] [Server thread/INFO]: Changing view distance to 12, from 10
-[18:52:33] [Client thread/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@1fc3d3ec[id=3bdd7bc1-57b3-3ed1-a14e-cc7341dec1b1,name=Player375,properties={},legacy=false]
-com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:71) ~[YggdrasilAuthenticationService.class:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:168) [YggdrasilMinecraftSessionService.class:?]
-	at net.minecraft.client.Minecraft.launchIntegratedServer(Minecraft.java:2450) [Minecraft.class:?]
-	at net.minecraftforge.fml.client.FMLClientHandler.tryLoadExistingWorld(FMLClientHandler.java:723) [FMLClientHandler.class:?]
-	at net.minecraft.client.gui.GuiListWorldSelectionEntry.loadWorld(GuiListWorldSelectionEntry.java:249) [GuiListWorldSelectionEntry.class:?]
-	at net.minecraft.client.gui.GuiListWorldSelectionEntry.joinWorld(GuiListWorldSelectionEntry.java:203) [GuiListWorldSelectionEntry.class:?]
-	at net.minecraft.client.gui.GuiListWorldSelectionEntry.mousePressed(GuiListWorldSelectionEntry.java:167) [GuiListWorldSelectionEntry.class:?]
-	at net.minecraft.client.gui.GuiListExtended.mouseClicked(GuiListExtended.java:57) [GuiListExtended.class:?]
-	at net.minecraft.client.gui.GuiWorldSelection.mouseClicked(GuiWorldSelection.java:134) [GuiWorldSelection.class:?]
-	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:619) [GuiScreen.class:?]
-	at net.minecraft.client.gui.GuiWorldSelection.handleMouseInput(GuiWorldSelection.java:49) [GuiWorldSelection.class:?]
-	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:585) [GuiScreen.class:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1797) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1118) [Minecraft.class:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:406) [Minecraft.class:?]
-	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_121]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_121]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_121]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_121]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_121]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_121]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_121]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_121]
-	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
-	at GradleStart.main(GradleStart.java:26) [start/:?]
-Caused by: java.net.SocketTimeoutException: connect timed out
-	at java.net.TwoStacksPlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_121]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_121]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_121]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_121]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_121]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_121]
-	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_121]
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:668) ~[?:1.8.0_121]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[?:1.8.0_121]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[?:1.8.0_121]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1181) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:1022) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:1020) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1019) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1466) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1464) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1463) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254) ~[?:1.8.0_121]
-	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[HttpAuthenticationService.class:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[YggdrasilAuthenticationService.class:?]
-	... 28 more
-[18:52:34] [Server thread/INFO]: Player375[local:E:340c42ba] logged in with entity id 44 at (704.3000000119209, 56.0, -456.30000001192093)
-[18:52:34] [Server thread/INFO]: Player375 joined the game
-[18:52:36] [Server thread/INFO]: Saving and pausing game...
-[18:52:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[18:52:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[18:52:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[18:52:51] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@b9bcb01[id=3bdd7bc1-57b3-3ed1-a14e-cc7341dec1b1,name=Player375,properties={},legacy=false]
-com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:71) ~[YggdrasilAuthenticationService.class:?]
+[21:41:50] [Client thread/INFO]: Setting user: Player956
+[21:42:06] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:42:06] [Client thread/INFO]: LWJGL Version: 2.9.4
+[21:42:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[21:42:23] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:42:23] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[21:42:23] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:42:23] [Thread-8/INFO]: OpenAL initialized.
+[21:42:23] [Sound Library Loader/INFO]: Sound engine started
+[21:42:33] [Client thread/INFO]: Created: 16x16 textures-atlas
+[21:42:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[21:42:43] [Client thread/INFO]: SoundSystem shutting down...
+[21:42:43] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:42:43] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:42:44] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[21:42:44] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:42:44] [Thread-10/INFO]: OpenAL initialized.
+[21:42:44] [Sound Library Loader/INFO]: Sound engine started
+[21:42:52] [Client thread/INFO]: Created: 512x512 textures-atlas
+[21:42:57] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:42:59] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[21:43:04] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[21:43:04] [Server thread/INFO]: Generating keypair
+[21:43:06] [Server thread/INFO]: Preparing start region for level 0
+[21:43:07] [Server thread/INFO]: Preparing spawn area: 47%
+[21:43:08] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:43:10] [Server thread/INFO]: Player956[local:E:b11d7834] logged in with entity id 44 at (691.2583719410158, 56.0, -446.11543190776405)
+[21:43:10] [Server thread/INFO]: Player956 joined the game
+[21:43:12] [Server thread/INFO]: Saving and pausing game...
+[21:43:12] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:43:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:43:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:43:14] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@700a65d6[id=618cb0ab-8f59-3811-afad-31574b3b487c,name=Player956,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:59) [YggdrasilMinecraftSessionService$1.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:56) [YggdrasilMinecraftSessionService$1.class:?]
@@ -115,53 +52,106 @@ com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_121]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_121]
 	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
-Caused by: java.net.SocketTimeoutException: connect timed out
-	at java.net.TwoStacksPlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_121]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_121]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_121]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_121]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_121]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_121]
-	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_121]
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:668) ~[?:1.8.0_121]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[?:1.8.0_121]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[?:1.8.0_121]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1181) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:1022) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:1020) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1019) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:91) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1466) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1464) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
-	at java.security.AccessController.doPrivilegedWithCombiner(AccessController.java:782) ~[?:1.8.0_121]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1463) ~[?:1.8.0_121]
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254) ~[?:1.8.0_121]
-	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[HttpAuthenticationService.class:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[YggdrasilAuthenticationService.class:?]
-	... 19 more
-[18:55:05] [Server thread/INFO]: Saving and pausing game...
-[18:55:05] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[18:55:05] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[18:55:05] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[18:55:13] [Server thread/INFO]: Saving and pausing game...
-[18:55:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[18:55:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[18:55:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[18:55:14] [Server thread/INFO]: Stopping server
-[18:55:14] [Server thread/INFO]: Saving players
-[18:55:14] [Server thread/INFO]: Saving worlds
-[18:55:14] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[18:55:14] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[18:55:14] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[18:55:16] [Client thread/INFO]: Stopping!
-[18:55:16] [Client thread/INFO]: SoundSystem shutting down...
-[18:55:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:43:18] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_121]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_121]
+	at net.minecraft.util.Util.runTask(Util.java:29) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:743) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:688) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:537) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.inventory.InventoryHelper.spawnItemStack(InventoryHelper.java:43) ~[InventoryHelper.class:?]
+	at boblovespi.electricitymod.block.BlastFurnace.breakBlock(BlastFurnace.java:136) ~[BlastFurnace.class:?]
+	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:613) ~[Chunk.class:?]
+	at net.minecraft.world.World.setBlockState(World.java:388) ~[World.class:?]
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1324) ~[Block.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:298) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:292) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.tryHarvestBlock(PlayerInteractionManager.java:339) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.onBlockClicked(PlayerInteractionManager.java:175) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:658) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:56) ~[CPacketPlayerDigging.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:12) ~[CPacketPlayerDigging.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_121]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_121]
+	at net.minecraft.util.Util.runTask(Util.java:28) ~[Util.class:?]
+	... 5 more
+[21:43:19] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_121]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_121]
+	at net.minecraft.util.Util.runTask(Util.java:29) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:743) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:688) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:537) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.inventory.InventoryHelper.spawnItemStack(InventoryHelper.java:43) ~[InventoryHelper.class:?]
+	at boblovespi.electricitymod.block.BlastFurnace.breakBlock(BlastFurnace.java:136) ~[BlastFurnace.class:?]
+	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:613) ~[Chunk.class:?]
+	at net.minecraft.world.World.setBlockState(World.java:388) ~[World.class:?]
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1324) ~[Block.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:298) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:292) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.tryHarvestBlock(PlayerInteractionManager.java:339) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.onBlockClicked(PlayerInteractionManager.java:175) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:658) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:56) ~[CPacketPlayerDigging.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:12) ~[CPacketPlayerDigging.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_121]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_121]
+	at net.minecraft.util.Util.runTask(Util.java:28) ~[Util.class:?]
+	... 5 more
+[21:43:20] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_121]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_121]
+	at net.minecraft.util.Util.runTask(Util.java:29) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:743) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:688) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:537) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.inventory.InventoryHelper.spawnItemStack(InventoryHelper.java:43) ~[InventoryHelper.class:?]
+	at boblovespi.electricitymod.block.BlastFurnace.breakBlock(BlastFurnace.java:136) ~[BlastFurnace.class:?]
+	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:613) ~[Chunk.class:?]
+	at net.minecraft.world.World.setBlockState(World.java:388) ~[World.class:?]
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1324) ~[Block.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:298) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:292) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.tryHarvestBlock(PlayerInteractionManager.java:339) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.onBlockClicked(PlayerInteractionManager.java:175) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:658) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:56) ~[CPacketPlayerDigging.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:12) ~[CPacketPlayerDigging.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_121]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_121]
+	at net.minecraft.util.Util.runTask(Util.java:28) ~[Util.class:?]
+	... 5 more
+[21:44:10] [Server thread/INFO]: Saving and pausing game...
+[21:44:10] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:44:10] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:44:10] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:45:25] [Server thread/INFO]: Player956 has just earned the achievement [Taking Inventory]
+[21:45:25] [Client thread/INFO]: [CHAT] Player956 has just earned the achievement [Taking Inventory]
+[21:46:16] [Server thread/INFO]: Saving and pausing game...
+[21:46:16] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:46:16] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:46:16] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:48:13] [Server thread/INFO]: Stopping server
+[21:48:13] [Server thread/INFO]: Saving players
+[21:48:13] [Server thread/INFO]: Saving worlds
+[21:48:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:48:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:48:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:48:16] [Client thread/INFO]: Stopping!
+[21:48:16] [Client thread/INFO]: SoundSystem shutting down...
+[21:48:17] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
