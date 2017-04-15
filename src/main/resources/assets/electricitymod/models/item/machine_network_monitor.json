@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "electricitymod:blocks/wierd_machine_green"
+  }
+}

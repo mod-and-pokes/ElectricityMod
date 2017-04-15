@@ -44,4 +44,19 @@ public class NBTHelper
 
 		return new DimLocation(locs[1], locs[2], locs[3], locs[4]);
 	}
+
+	public static boolean getBoolTag(ItemStack stack, String key)
+	{
+		return getTag(stack).getBoolean("key");
+	}
+
+	public static void setBoolTag(ItemStack stack, String key, boolean val)
+	{
+		getTag(stack).setBoolean(key, val);
+	}
+
+	public static void ToggleBoolTag(ItemStack stack, String key)
+	{
+		setBoolTag(stack, key, !getBoolTag(stack, key));
+	}
 }

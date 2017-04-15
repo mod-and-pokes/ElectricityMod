@@ -32,8 +32,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 	@SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS) public static CommonProxy proxy;
 
-
-
 	@Mod.EventHandler public void PreInit(FMLPreInitializationEvent e)
 	{
 		//Logger log = e.getModLog();
@@ -52,6 +50,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 		BlockInit.Register();
 
 		proxy.PreInit();
+
+		EntityInit.Init();
 
 	}
 

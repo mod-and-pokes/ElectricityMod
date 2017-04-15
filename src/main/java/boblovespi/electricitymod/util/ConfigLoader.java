@@ -77,20 +77,20 @@ public class ConfigLoader
 		propertyCookSpeedScalar.setMaxValue(10f);
 
 		Property propertyBurnSpeedScalar = config
-				.get(CATEGORY_NAME_BLAST_FURNACE, "burn_speed_scalar", 1f);
-		propertyCookSpeedScalar.setLanguageKey(
+				.get(CATEGORY_NAME_BLAST_FURNACE, "burn_speed_scalar", 2f);
+		propertyBurnSpeedScalar.setLanguageKey(
 				"gui.config.blast_furnace.burn_speed_scalar.name");
-		propertyCookSpeedScalar.setComment(I18n.format(
+		propertyBurnSpeedScalar.setComment(I18n.format(
 				"gui.config.blast_furnace.burn_speed_scalar.comment"));
 
 		propertyCookSpeedScalar.setMinValue(0.1f);
 		propertyCookSpeedScalar.setMaxValue(10f);
 
 		Property propertySteelSmeltTime = config
-				.get(CATEGORY_NAME_BLAST_FURNACE, "smelt_time", 1000);
+				.get(CATEGORY_NAME_BLAST_FURNACE, "smelt_time", 2000);
 		propertySteelSmeltTime
 				.setLanguageKey("gui.config.blast_furnace.smelt_time.name");
-		propertyCookSpeedScalar.setComment(
+		propertySteelSmeltTime.setComment(
 				I18n.format("gui.config.blast_furnace.smelt_time.comment"));
 
 		propertySteelSmeltTime.setMinValue(1);

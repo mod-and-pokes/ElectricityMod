@@ -10,16 +10,17 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.ChunkCache;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
-import java.util.Random;
+import net.minecraft.world.chunk.Chunk;
 
 /**
  * Created by Willi on 4/12/2017.
  */
 public class PoweredLight extends Block implements ITileEntityProvider, EMBlock
 {
-	private static final PropertyBool IsActivated = PropertyBool
+	public static final PropertyBool IsActivated = PropertyBool
 			.create("running");
 
 	public PoweredLight()
@@ -53,45 +54,56 @@ public class PoweredLight extends Block implements ITileEntityProvider, EMBlock
 
 	@Override public TileEntity createNewTileEntity(World worldIn, int meta)
 	{
-		return new TileEntityPoweredLight(meta == 0);
+		return new TileEntityPoweredLight();
 	}
 
-	private void LightOn()
+	public void LightOn()
 	{
 		getDefaultState().withProperty(IsActivated, true);
 		setLightLevel(1);
 	}
 
-	private void LightOff()
+	public void LightOff()
 	{
 		getDefaultState().withProperty(IsActivated, false);
 		setLightLevel(0);
+
 	}
 
-	@Override public void updateTick(World worldIn, BlockPos pos,
-			IBlockState state, Random rand)
+	public void LightToggle()
 	{
-		if (worldIn.isRemote)
-			return;
-		if (worldIn.getTileEntity(pos) != null && worldIn
-				.getTileEntity(pos) instanceof TileEntityPoweredLight)
-		{
-			if (((TileEntityPoweredLight) worldIn.getTileEntity(pos)).isOn)
-				LightOn();
-			else
-				LightOff();
-
-		}
+		if (getBlockState().getBaseState().getValue(IsActivated))
+			LightOff();
+		else
+			LightOn();
 	}
+
+	//	@Override public void updateTick(World worldIn, BlockPos pos,
+	//			IBlockState state, Random rand)
+	//	{
+	//		if (worldIn.isRemote)
+	//			return;
+	//		if (worldIn.getTileEntity(pos) != null && worldIn
+	//				.getTileEntity(pos) instanceof TileEntityPoweredLight)
+	//		{
+	//			boolean prevLevel = getBlockState()
+	//			if (((TileEntityPoweredLight) worldIn.getTileEntity(pos)).isOn)
+	//				LightOn();
+	//			else
+	//				LightOff();
+	//
+	//			worldIn.notifyLightSet(pos);
+	//		}
+	//	}
 
 	@Override public IBlockState getStateFromMeta(int meta)
 	{
-		return getDefaultState().withProperty(IsActivated, meta == 1);
+		return getDefaultState();
 	}
 
 	@Override public int getMetaFromState(IBlockState state)
 	{
-		return state.getValue(IsActivated) ? 1 : 0;
+		return 0;
 	}
 
 	@Override public BlockStateContainer getBlockState()
@@ -104,4 +116,20 @@ public class PoweredLight extends Block implements ITileEntityProvider, EMBlock
 		return new BlockStateContainer(this, IsActivated);
 	}
 
+	@Override public IBlockState getActualState(IBlockState state,
+			IBlockAccess worldIn, BlockPos pos)
+	{
+		TileEntity tileentity = worldIn instanceof ChunkCache ?
+				((ChunkCache) worldIn)
+						.getTileEntity(pos, Chunk.EnumCreateEntityType.CHECK) :
+				worldIn.getTileEntity(pos);
+
+		if (tileentity != null && tileentity instanceof TileEntityPoweredLight)
+		{
+			state.withProperty(IsActivated,
+					((TileEntityPoweredLight) tileentity).isOn);
+		}
+
+		return state;
+	}
 }

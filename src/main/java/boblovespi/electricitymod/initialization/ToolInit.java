@@ -16,12 +16,21 @@ public class ToolInit
 	public static final ToolMaterial bronzeMaterial = EnumHelper
 			.addToolMaterial(ElectricityMod.MOD_ID + ":bronze", 2, 251, 5.0F,
 					2.0F, 12);
+	public static final ToolMaterial steelMaterial = EnumHelper
+			.addToolMaterial(ElectricityMod.MOD_ID + ":steel", 3, 1920, 6.5f, 8,
+					3);
 
 	public static ItemPickaxe bronzePickaxe;
 	public static ItemModAxe bronzeAxe;
 	public static ItemHoe bronzeHoe;
 	public static ItemSpade bronzeShovel;
 	public static ItemSword bronzeSword;
+
+	public static ItemPickaxe steelPickaxe;
+	public static ItemModAxe steelAxe;
+	public static ItemHoe steelHoe;
+	public static ItemSpade steelShovel;
+	public static ItemSword steelSword;
 
 	public static void Init()
 	{
@@ -30,6 +39,12 @@ public class ToolInit
 		bronzeHoe = new ItemModHoe(bronzeMaterial, "bronze_hoe");
 		bronzeShovel = new ItemModShovel(bronzeMaterial, "bronze_shovel");
 		bronzeSword = new ItemModSword(bronzeMaterial, "bronze_sword");
+
+		steelPickaxe = new ItemModPickaxe(steelMaterial, "steel_pickaxe");
+		steelAxe = new ItemModAxe(steelMaterial, "steel_axe");
+		steelHoe = new ItemModHoe(steelMaterial, "steel_hoe");
+		steelShovel = new ItemModShovel(steelMaterial, "steel_shovel");
+		steelSword = new ItemModSword(steelMaterial, "steel_sword");
 	}
 
 	public static void Register()
@@ -39,6 +54,12 @@ public class ToolInit
 		GameRegistry.register(bronzeHoe);
 		GameRegistry.register(bronzeShovel);
 		GameRegistry.register(bronzeSword);
+
+		GameRegistry.register(steelPickaxe);
+		GameRegistry.register(steelAxe);
+		GameRegistry.register(steelHoe);
+		GameRegistry.register(steelShovel);
+		GameRegistry.register(steelSword);
 	}
 
 	public static void RegisterRenders()
@@ -48,6 +69,12 @@ public class ToolInit
 		registerRender(bronzeHoe);
 		registerRender(bronzeShovel);
 		registerRender(bronzeSword);
+
+		registerRender(steelPickaxe);
+		registerRender(steelAxe);
+		registerRender(steelHoe);
+		registerRender(steelShovel);
+		registerRender(steelSword);
 	}
 
 	private static void registerRender(Item item)

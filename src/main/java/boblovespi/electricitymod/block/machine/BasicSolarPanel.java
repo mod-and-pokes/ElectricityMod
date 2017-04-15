@@ -130,4 +130,10 @@ public class BasicSolarPanel extends Block
 			return false;
 		}
 	}
+
+	@Override public boolean removedByPlayer(IBlockState state, World world,
+			BlockPos pos, EntityPlayer player, boolean willHarvest)
+	{
+		return super.removedByPlayer(state, world, pos, player, willHarvest);
+	}
 }

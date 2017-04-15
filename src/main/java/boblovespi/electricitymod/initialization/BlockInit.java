@@ -1,12 +1,9 @@
 package boblovespi.electricitymod.initialization;
 
-import boblovespi.electricitymod.block.BlastFurnace;
 import boblovespi.electricitymod.block.Concrete;
 import boblovespi.electricitymod.block.EMBlock;
 import boblovespi.electricitymod.block.RiceCrop;
-import boblovespi.electricitymod.block.machine.BasicSolarPanel;
-import boblovespi.electricitymod.block.machine.PoweredLight;
-import boblovespi.electricitymod.block.machine.SiliconProcessor;
+import boblovespi.electricitymod.block.machine.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -24,6 +21,7 @@ public class BlockInit
 	public static EMBlock riceCrop;
 	public static EMBlock poweredLight;
 	public static EMBlock blastFurnace;
+	public static EMBlock networkMonitor;
 
 	public static void Init()
 	{
@@ -33,6 +31,7 @@ public class BlockInit
 		riceCrop = new RiceCrop();
 		poweredLight = new PoweredLight();
 		blastFurnace = new BlastFurnace();
+		networkMonitor = new EnergyNetworkMonitor();
 	}
 
 	public static void Register()
@@ -42,6 +41,7 @@ public class BlockInit
 		RegisterBlock(solarPanel);
 		RegisterBlock(poweredLight);
 		RegisterBlock(blastFurnace);
+		RegisterBlock(networkMonitor);
 
 		RegisterOnlyBlock(riceCrop);
 	}
@@ -67,6 +67,7 @@ public class BlockInit
 		RegisterRender(solarPanel);
 		RegisterRender(poweredLight);
 		RegisterRender(blastFurnace);
+		RegisterRender(networkMonitor);
 
 		RegisterRender(riceCrop);
 	}

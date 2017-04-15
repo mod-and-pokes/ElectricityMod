@@ -28,6 +28,8 @@ public class ItemInit
 	public static EMItem chineseFood;
 	public static EMItem coalCoke;
 	public static EMItem slag;
+	public static EMItem crosbowBolt;
+	public static EMItem crosbow;
 
 	public static void Init()
 	{
@@ -40,6 +42,9 @@ public class ItemInit
 		wireSpool = new WireSpool();
 		coalCoke = new EMBaseItem("coal_coke", CreativeTabs.MATERIALS);
 		slag = new EMBaseItem("slag", CreativeTabs.MATERIALS);
+
+		crosbowBolt = new EMBaseItem("crossbow_bolt", CreativeTabs.COMBAT);
+		crosbow = new Crossbow();
 
 		chineseFood = new EMFood("chinese_food", 12, 12, 72, false, false,
 				Arrays.asList(new PotionEffect[] {
@@ -66,6 +71,8 @@ public class ItemInit
 		RegisterItem(wireSpool);
 		RegisterItem(coalCoke);
 		RegisterItem(slag);
+		RegisterItem(crosbow);
+		RegisterItem(crosbowBolt);
 	}
 
 	private static void RegisterItem(EMItem i)
@@ -93,6 +100,10 @@ public class ItemInit
 
 		RegisterRender(coalCoke, 0);
 		RegisterRender(slag, 0);
+
+		RegisterRender(crosbow, 0, crosbow.getMetaFilePath(0));
+		RegisterRender(crosbow, 0, crosbow.getMetaFilePath(1));
+		RegisterRender(crosbowBolt, 0);
 	}
 
 	private static void RegisterRender(EMItem item, int meta)
@@ -152,6 +163,12 @@ public class ItemInit
 						wireSpool.getMetaFilePath(0)),
 				new ResourceLocation(ElectricityMod.MOD_ID,
 						wireSpool.getMetaFilePath(1)));
+
+		ModelBakery.registerItemVariants(crosbow.toItem(),
+				new ResourceLocation(ElectricityMod.MOD_ID,
+						crosbow.getMetaFilePath(0)),
+				new ResourceLocation(ElectricityMod.MOD_ID,
+						crosbow.getMetaFilePath(1)));
 	}
 
 	/* TODO: private static void RegisterVariation()

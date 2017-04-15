@@ -54,6 +54,8 @@ public class TileEntitySolarPanel extends TileEntity
 			return;
 		timer = 20;
 
+		float prev = powerGenerated;
+
 		int light = worldObj.getLightFor(EnumSkyBlock.SKY, getPos().up());
 		canSeeSky = worldObj.canSeeSky(getPos().up());
 		canSeeSky = light > 5;
@@ -61,7 +63,7 @@ public class TileEntitySolarPanel extends TileEntity
 			powerGenerated = worldObj.isDaytime() ? light * light / 10 : 2;
 		else
 			powerGenerated = 0;
-		if (network != null)
+		if (prev != powerGenerated && network != null)
 			network.RecalculatePower();
 	}
 

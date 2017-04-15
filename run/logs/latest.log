@@ -1,36 +1,55 @@
-[21:41:50] [Client thread/INFO]: Setting user: Player956
-[21:42:06] [Client thread/WARN]: Skipping bad option: lastServer:
-[21:42:06] [Client thread/INFO]: LWJGL Version: 2.9.4
-[21:42:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[21:42:23] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:42:23] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[21:42:23] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:42:23] [Thread-8/INFO]: OpenAL initialized.
-[21:42:23] [Sound Library Loader/INFO]: Sound engine started
-[21:42:33] [Client thread/INFO]: Created: 16x16 textures-atlas
-[21:42:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[21:42:43] [Client thread/INFO]: SoundSystem shutting down...
-[21:42:43] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[21:42:43] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:42:44] [Thread-10/INFO]: Initializing LWJGL OpenAL
-[21:42:44] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:42:44] [Thread-10/INFO]: OpenAL initialized.
-[21:42:44] [Sound Library Loader/INFO]: Sound engine started
-[21:42:52] [Client thread/INFO]: Created: 512x512 textures-atlas
-[21:42:57] [Client thread/WARN]: Skipping bad option: lastServer:
-[21:42:59] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[21:43:04] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
-[21:43:04] [Server thread/INFO]: Generating keypair
-[21:43:06] [Server thread/INFO]: Preparing start region for level 0
-[21:43:07] [Server thread/INFO]: Preparing spawn area: 47%
-[21:43:08] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:43:10] [Server thread/INFO]: Player956[local:E:b11d7834] logged in with entity id 44 at (691.2583719410158, 56.0, -446.11543190776405)
-[21:43:10] [Server thread/INFO]: Player956 joined the game
-[21:43:12] [Server thread/INFO]: Saving and pausing game...
-[21:43:12] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[21:43:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[21:43:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[21:43:14] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@700a65d6[id=618cb0ab-8f59-3811-afad-31574b3b487c,name=Player956,properties={},legacy=false]
+[21:17:11] [Client thread/INFO]: Setting user: Player155
+[21:17:26] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:17:26] [Client thread/INFO]: LWJGL Version: 2.9.4
+[21:17:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[21:17:44] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:17:44] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[21:17:44] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:17:45] [Thread-8/ERROR]: Error in class 'LibraryLWJGLOpenAL'
+[21:17:45] [Thread-8/ERROR]: Unable to initialize OpenAL.  Probable cause: OpenAL not supported.
+[21:17:45] [Thread-8/WARN]: ERROR MESSAGE:
+[21:17:45] [Thread-8/INFO]: Could not locate OpenAL library.
+[21:17:45] [Thread-8/WARN]: STACK TRACE:
+[21:17:45] [Thread-8/INFO]: org.lwjgl.openal.AL.create(AL.java:156)
+[21:17:45] [Thread-8/INFO]: org.lwjgl.openal.AL.create(AL.java:102)
+[21:17:45] [Thread-8/INFO]: org.lwjgl.openal.AL.create(AL.java:206)
+[21:17:45] [Thread-8/INFO]: paulscode.sound.libraries.LibraryLWJGLOpenAL.init(LibraryLWJGLOpenAL.java:164)
+[21:17:45] [Thread-8/INFO]: paulscode.sound.SoundSystem.CommandNewLibrary(SoundSystem.java:1576)
+[21:17:45] [Thread-8/INFO]: paulscode.sound.SoundSystem.CommandQueue(SoundSystem.java:2572)
+[21:17:45] [Thread-8/INFO]: paulscode.sound.CommandThread.run(CommandThread.java:121)
+[21:17:45] [Sound Library Loader/WARN]: ERROR MESSAGE:
+[21:17:45] [Sound Library Loader/INFO]: Could not locate OpenAL library.
+[21:17:45] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:17:45] [Thread-10/INFO]: Switching to No Sound
+[21:17:45] [Thread-10/INFO]: (Silent Mode)
+[21:17:45] [Sound Library Loader/INFO]: Sound engine started
+[21:17:54] [Client thread/INFO]: Created: 16x16 textures-atlas
+[21:17:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[21:18:08] [Client thread/INFO]: SoundSystem shutting down...
+[21:18:08] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:18:08] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:18:08] [Thread-12/INFO]: Initializing LWJGL OpenAL
+[21:18:08] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:18:08] [Thread-12/INFO]: OpenAL initialized.
+[21:18:09] [Sound Library Loader/INFO]: Sound engine started
+[21:18:19] [Client thread/INFO]: Created: 512x512 textures-atlas
+[21:18:22] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:18:23] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[21:18:50] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[21:18:50] [Server thread/INFO]: Generating keypair
+[21:18:52] [Server thread/INFO]: Preparing start region for level 0
+[21:18:53] [Server thread/INFO]: Preparing spawn area: 32%
+[21:18:54] [Server thread/INFO]: Preparing spawn area: 83%
+[21:18:55] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:18:57] [Server thread/INFO]: Player155[local:E:34eae527] logged in with entity id 44 at (689.5882700978221, 56.75, -431.9882446338276)
+[21:18:57] [Server thread/INFO]: Player155 joined the game
+[21:19:00] [Server thread/INFO]: Saving and pausing game...
+[21:19:00] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:19:00] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:19:00] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:19:03] [Server thread/INFO]: Saving and pausing game...
+[21:19:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[21:19:03] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@198ef043[id=60d19c6d-8381-348f-9d23-cb28708609fc,name=Player155,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
@@ -52,106 +71,16 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_121]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_121]
 	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
-[21:43:18] [Server thread/FATAL]: Error executing task
-java.util.concurrent.ExecutionException: java.lang.NullPointerException
-	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_121]
-	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_121]
-	at net.minecraft.util.Util.runTask(Util.java:29) [Util.class:?]
-	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:743) [MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:688) [MinecraftServer.class:?]
-	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
-	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:537) [MinecraftServer.class:?]
-	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
-Caused by: java.lang.NullPointerException
-	at net.minecraft.inventory.InventoryHelper.spawnItemStack(InventoryHelper.java:43) ~[InventoryHelper.class:?]
-	at boblovespi.electricitymod.block.BlastFurnace.breakBlock(BlastFurnace.java:136) ~[BlastFurnace.class:?]
-	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:613) ~[Chunk.class:?]
-	at net.minecraft.world.World.setBlockState(World.java:388) ~[World.class:?]
-	at net.minecraft.block.Block.removedByPlayer(Block.java:1324) ~[Block.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:298) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:292) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.tryHarvestBlock(PlayerInteractionManager.java:339) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.onBlockClicked(PlayerInteractionManager.java:175) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:658) ~[NetHandlerPlayServer.class:?]
-	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:56) ~[CPacketPlayerDigging.class:?]
-	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:12) ~[CPacketPlayerDigging.class:?]
-	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_121]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_121]
-	at net.minecraft.util.Util.runTask(Util.java:28) ~[Util.class:?]
-	... 5 more
-[21:43:19] [Server thread/FATAL]: Error executing task
-java.util.concurrent.ExecutionException: java.lang.NullPointerException
-	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_121]
-	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_121]
-	at net.minecraft.util.Util.runTask(Util.java:29) [Util.class:?]
-	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:743) [MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:688) [MinecraftServer.class:?]
-	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
-	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:537) [MinecraftServer.class:?]
-	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
-Caused by: java.lang.NullPointerException
-	at net.minecraft.inventory.InventoryHelper.spawnItemStack(InventoryHelper.java:43) ~[InventoryHelper.class:?]
-	at boblovespi.electricitymod.block.BlastFurnace.breakBlock(BlastFurnace.java:136) ~[BlastFurnace.class:?]
-	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:613) ~[Chunk.class:?]
-	at net.minecraft.world.World.setBlockState(World.java:388) ~[World.class:?]
-	at net.minecraft.block.Block.removedByPlayer(Block.java:1324) ~[Block.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:298) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:292) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.tryHarvestBlock(PlayerInteractionManager.java:339) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.onBlockClicked(PlayerInteractionManager.java:175) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:658) ~[NetHandlerPlayServer.class:?]
-	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:56) ~[CPacketPlayerDigging.class:?]
-	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:12) ~[CPacketPlayerDigging.class:?]
-	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_121]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_121]
-	at net.minecraft.util.Util.runTask(Util.java:28) ~[Util.class:?]
-	... 5 more
-[21:43:20] [Server thread/FATAL]: Error executing task
-java.util.concurrent.ExecutionException: java.lang.NullPointerException
-	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_121]
-	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_121]
-	at net.minecraft.util.Util.runTask(Util.java:29) [Util.class:?]
-	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:743) [MinecraftServer.class:?]
-	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:688) [MinecraftServer.class:?]
-	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
-	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:537) [MinecraftServer.class:?]
-	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
-Caused by: java.lang.NullPointerException
-	at net.minecraft.inventory.InventoryHelper.spawnItemStack(InventoryHelper.java:43) ~[InventoryHelper.class:?]
-	at boblovespi.electricitymod.block.BlastFurnace.breakBlock(BlastFurnace.java:136) ~[BlastFurnace.class:?]
-	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:613) ~[Chunk.class:?]
-	at net.minecraft.world.World.setBlockState(World.java:388) ~[World.class:?]
-	at net.minecraft.block.Block.removedByPlayer(Block.java:1324) ~[Block.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:298) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.removeBlock(PlayerInteractionManager.java:292) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.tryHarvestBlock(PlayerInteractionManager.java:339) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.server.management.PlayerInteractionManager.onBlockClicked(PlayerInteractionManager.java:175) ~[PlayerInteractionManager.class:?]
-	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:658) ~[NetHandlerPlayServer.class:?]
-	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:56) ~[CPacketPlayerDigging.class:?]
-	at net.minecraft.network.play.client.CPacketPlayerDigging.processPacket(CPacketPlayerDigging.java:12) ~[CPacketPlayerDigging.class:?]
-	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_121]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_121]
-	at net.minecraft.util.Util.runTask(Util.java:28) ~[Util.class:?]
-	... 5 more
-[21:44:10] [Server thread/INFO]: Saving and pausing game...
-[21:44:10] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[21:44:10] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[21:44:10] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[21:45:25] [Server thread/INFO]: Player956 has just earned the achievement [Taking Inventory]
-[21:45:25] [Client thread/INFO]: [CHAT] Player956 has just earned the achievement [Taking Inventory]
-[21:46:16] [Server thread/INFO]: Saving and pausing game...
-[21:46:16] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[21:46:16] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[21:46:16] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[21:48:13] [Server thread/INFO]: Stopping server
-[21:48:13] [Server thread/INFO]: Saving players
-[21:48:13] [Server thread/INFO]: Saving worlds
-[21:48:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[21:48:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[21:48:13] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[21:48:16] [Client thread/INFO]: Stopping!
-[21:48:16] [Client thread/INFO]: SoundSystem shutting down...
-[21:48:17] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:19:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[21:19:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[21:19:23] [Client thread/INFO]: [CHAT] Usage: /gamemode <mode> [player]
+[21:19:26] [Server thread/INFO]: [Player155: Set own game mode to Creative Mode]
+[21:19:26] [Client thread/INFO]: [CHAT] Your game mode has been updated to Creative Mode
+[21:19:26] [Server thread/INFO]: Player155 has just earned the achievement [Taking Inventory]
+[21:19:26] [Client thread/INFO]: [CHAT] Player155 has just earned the achievement [Taking Inventory]
+[21:19:37] [Client thread/INFO]: [CHAT] is player, doing tests
+[21:19:37] [Client thread/INFO]: [CHAT] charging up
+[21:19:37] [Client thread/INFO]: [CHAT] found ammo
+[21:19:37] [Client thread/INFO]: [CHAT] is player, doing tests
+[21:19:37] [Client thread/INFO]: [CHAT] charging up
+[21:19:37] [Client thread/INFO]: [CHAT] found ammo

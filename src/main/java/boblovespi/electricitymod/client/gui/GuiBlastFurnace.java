@@ -37,16 +37,19 @@ public class GuiBlastFurnace extends GuiContainer
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
 		int k = (int) (te.getRemainingBurnTime() / te.getLastBurnTime() * 14);
+		int l = (int) (te.getCurrentSmeltTime() / te.getTotalSmeltTime() * 24);
 		if (te.isBurning())
 		{
 
-			this.drawTexturedModalRect(guiLeft + 56, guiTop + 51 - k, 176,
+			this.drawTexturedModalRect(guiLeft + 56, guiTop + 50 - k, 176,
 					14 - k, 14, k);
 		}
+		if (te.isSmelting())
+		{
 
-		int l = (int) (1
-				- (te.getCurrentSmeltTime() / te.getTotalSmeltTime()) * 24);
-		this.drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 14, l, 16);
+			this.drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 14,
+					24 - l, 16);
+		}
 
 		//		Debug.DebugLog()
 		//				.debug("\n\n\tD E B U G\n-------------------------------------------------------\n");
@@ -56,11 +59,14 @@ public class GuiBlastFurnace extends GuiContainer
 		//		Debug.DebugLog().debug("smelt progress: " + (
 		//				te.getCurrentSmeltTime() / te.getTotalSmeltTime() * 24));
 		//		Debug.DebugLog().debug("burn time: " + (
-		//				te.getRemainingBurnTime() / te.getLastBurnTime() * 14)+"\n");
+		//				te.getRemainingBurnTime() / te.getLastBurnTime() * 14) + "\n");
 		//		Debug.DebugLog().debug("total smelt time: " + (te.getTotalSmeltTime()));
-		//		Debug.DebugLog().debug("current smelt time: " + (te.getCurrentSmeltTime())+"\n");
+		//		Debug.DebugLog()
+		//				.debug("current smelt time: " + (te.getCurrentSmeltTime())
+		//						+ "\n");
 		//		Debug.DebugLog().debug("last burn time: " + (te.getLastBurnTime()));
-		//		Debug.DebugLog().debug("remaining burn time: " + (te.getRemainingBurnTime()));
+		//		Debug.DebugLog()
+		//				.debug("remaining burn time: " + (te.getRemainingBurnTime()));
 
 	}
 

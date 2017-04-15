@@ -1,5 +1,6 @@
 package boblovespi.electricitymod.util;
 
+import boblovespi.electricitymod.initialization.BlockInit;
 import boblovespi.electricitymod.initialization.ItemInit;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -28,5 +29,9 @@ public class OreDictionaryHandler
 		OreDictionary
 				.registerOre("plateSilicon", ItemInit.siliconPlate.toItem());
 		OreDictionary.registerOre("foodRice", ItemInit.riceGrain.toItem());
+		OreDictionary
+				.registerOre("blockConcrete", BlockInit.concrete.toBlock());
+		OreDictionary.registerOre("itemSlag", ItemInit.slag.toItem());
+		OreDictionary.registerOre("fuelCoke", ItemInit.coalCoke.toItem());
 	}
 }

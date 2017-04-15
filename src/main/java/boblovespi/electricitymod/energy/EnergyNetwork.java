@@ -193,19 +193,22 @@ public class EnergyNetwork
 
 	public void Join(EnergyNetwork other)
 	{
-		machines.addAll(other.machines);
+
 		for (IUsesEnergy machine : other.machines)
 		{
+			Add(machine);
 			machine.setNetwork(this);
 		}
-		batteries.addAll(other.batteries);
+
 		for (IUsesEnergy machine : other.batteries)
 		{
+			Add(machine);
 			machine.setNetwork(this);
 		}
-		generators.addAll(other.generators);
+
 		for (IUsesEnergy machine : other.generators)
 		{
+			Add(machine);
 			machine.setNetwork(this);
 		}
 
@@ -217,4 +220,18 @@ public class EnergyNetwork
 		return this.saveMachine == saveMachine;
 	}
 
+	public float getPowerGenerated()
+	{
+		return maxPower;
+	}
+
+	public float getPowerUsed()
+	{
+		return usedPower;
+	}
+
+	public float getPowerRemaining()
+	{
+		return remainingPower;
+	}
 }

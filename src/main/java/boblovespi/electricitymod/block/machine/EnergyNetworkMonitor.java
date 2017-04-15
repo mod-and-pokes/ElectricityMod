@@ -1,6 +1,7 @@
 package boblovespi.electricitymod.block.machine;
 
 import boblovespi.electricitymod.block.EMBlock;
+import boblovespi.electricitymod.creativetabs.MachineTab;
 import boblovespi.electricitymod.tileentity.TileEntityNetworkMonitor;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -25,11 +26,16 @@ public class EnergyNetworkMonitor extends Block
 	public EnergyNetworkMonitor()
 	{
 		super(Material.REDSTONE_LIGHT);
+		setUnlocalizedName(UNLOCALIZED_NAME());
+		setRegistryName(REGISTERY_NAME());
+		setCreativeTab(MachineTab.MACHINE_TAB);
+		setHardness(3);
+		setResistance(1000000);
 	}
 
 	@Override public String UNLOCALIZED_NAME()
 	{
-		return "network_monitior";
+		return "machine_network_monitior";
 	}
 
 	@Override public String REGISTERY_NAME()
@@ -59,9 +65,11 @@ public class EnergyNetworkMonitor extends Block
 	{
 		if (world.isRemote)
 			return true;
-		if (world.getTileEntity(pos) instanceof TileEntityNetworkMonitor)
+		if (world.getTileEntity(pos) != null && world
+				.getTileEntity(pos) instanceof TileEntityNetworkMonitor)
 		{
-
+			((TileEntityNetworkMonitor) world.getTileEntity(pos))
+					.OnRightClick(playerIn);
 		}
 
 		return true;

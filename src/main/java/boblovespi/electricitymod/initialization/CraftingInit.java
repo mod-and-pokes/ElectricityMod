@@ -42,11 +42,20 @@ public class CraftingInit
 				"foodRice", "foodRice", "foodRice", "foodRice",
 				Blocks.BROWN_MUSHROOM, Items.BOWL, Items.COOKED_CHICKEN);
 		GameRegistry.addRecipe(chinese_food);
+		GameRegistry.addShapedRecipe(
+				new ItemStack(BlockInit.blastFurnace.toBlock()), "I I", "I I",
+				"CUC", 'I', Blocks.IRON_BLOCK, 'C',
+				BlockInit.concrete.toBlock(), 'U', Blocks.CAULDRON);
 
 		// Bronze
 		AddToolRecipies("ingotBronze", Items.STICK, ToolInit.bronzePickaxe,
 				ToolInit.bronzeAxe, ToolInit.bronzeSword, ToolInit.bronzeHoe,
 				ToolInit.bronzeShovel);
+
+		// Steel
+		AddToolRecipies("ingotSteel", Items.STICK, ToolInit.steelPickaxe,
+				ToolInit.steelAxe, ToolInit.steelSword, ToolInit.steelHoe,
+				ToolInit.steelShovel);
 
 		// Furnace recipes
 		GameRegistry.addSmelting(Items.BREAD,

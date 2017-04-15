@@ -164,7 +164,7 @@ public class TileEntityBlastFurnace extends TileEntity
 		}
 		markDirty();
 		IBlockState state = worldObj.getBlockState(pos);
-		worldObj.notifyBlockUpdate(pos, state, state,3);
+		worldObj.notifyBlockUpdate(pos, state, state, 3);
 	}
 
 	@Nullable @Override public SPacketUpdateTileEntity getUpdatePacket()
@@ -239,5 +239,10 @@ public class TileEntityBlastFurnace extends TileEntity
 	public float getTotalSmeltTime()
 	{
 		return steelSmeltTime;
+	}
+
+	public boolean isSmelting()
+	{
+		return isSmelting;
 	}
 }

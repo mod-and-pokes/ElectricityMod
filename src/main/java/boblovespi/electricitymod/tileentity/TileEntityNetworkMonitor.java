@@ -3,13 +3,15 @@ package boblovespi.electricitymod.tileentity;
 import boblovespi.electricitymod.energy.EnergyNetwork;
 import boblovespi.electricitymod.energy.IRequiresEnergy;
 import boblovespi.electricitymod.energy.IUsesEnergy;
+import boblovespi.electricitymod.util.Debug;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 
 /**
  * Created by Willi on 4/13/2017.
  */
-public class TileEntityNetworkMonitor extends TileEntity implements IRunnableMachine,
-		IRequiresEnergy
+public class TileEntityNetworkMonitor extends TileEntity
+		implements IRequiresEnergy
 {
 	private EnergyNetwork network;
 
@@ -54,18 +56,18 @@ public class TileEntityNetworkMonitor extends TileEntity implements IRunnableMac
 
 	}
 
-	@Override public boolean AttemptRun()
+	public void OnRightClick(EntityPlayer player)
 	{
-		return false;
-	}
+		if (worldObj.isRemote || player == null)
+			return;
+		Debug.ChatLog(player, "\n------[NETWORK INFO]------");
+		Debug.ChatLog(player,
+				"network power generated: " + network.getPowerGenerated());
+		Debug.ChatLog(player, "network power used: " + network.getPowerUsed());
+		Debug.ChatLog(player,
+				"network power remaining: " + network.getPowerRemaining());
+		Debug.ChatLog(player, "\n--------[END INFO]--------");
 
-	@Override public boolean IsRunning()
-	{
-		return false;
-	}
-
-	@Override public void update()
-	{
 
 	}
 }

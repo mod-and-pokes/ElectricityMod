@@ -6,6 +6,7 @@ import boblovespi.electricitymod.item.types.WireSpoolTypes;
 import boblovespi.electricitymod.util.Debug;
 import boblovespi.electricitymod.util.DimLocation;
 import boblovespi.electricitymod.util.NBTHelper;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -17,6 +18,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -180,6 +182,18 @@ public class WireSpool extends Item implements EMItem, IMulitTypable
 		return true;
 	}
 
+	@Override public void addInformation(ItemStack stack, EntityPlayer playerIn,
+			List<String> tooltip, boolean advanced)
+	{
+		if (NBTHelper.hasKey(stack, "linkingPos"))
+		{
+			DimLocation loc = NBTHelper.getLocationTag(stack, "linkingPos");
+			tooltip.add(TextFormatting.DARK_GRAY + I18n
+					.format(getUnlocalizedName() + ".tooltip", String.format(
+							"Linking to: %1$d, %2$d, %3$d in dimension %4$d",
+							loc.getX(), loc.getY(), loc.getZ(), loc.getDim())));
+		}
+	}
 }
 
 //	@Override public ActionResult<ItemStack> onItemRightClick(

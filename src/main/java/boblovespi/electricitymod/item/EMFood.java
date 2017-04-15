@@ -1,6 +1,5 @@
 package boblovespi.electricitymod.item;
 
-import boblovespi.electricitymod.item.types.MetalTypes;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -92,7 +91,7 @@ public class EMFood extends Item implements EMItem
 	@Override public void getSubItems(Item itemIn, CreativeTabs tab,
 			List<ItemStack> subItems)
 	{
-		for (int i = 0; i < MetalTypes.values().length; ++i)
+		for (int i = 0; i < 1; ++i)
 			subItems.add(new ItemStack(itemIn, 1, i));
 	}
 
@@ -150,10 +149,12 @@ public class EMFood extends Item implements EMItem
 		if (playerIn.canEat(alwaysEdible))
 		{
 			playerIn.setActiveHand(hand);
-			return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS,
+					itemStackIn);
 		} else
 		{
-			return new ActionResult(EnumActionResult.FAIL, itemStackIn);
+			return new ActionResult<ItemStack>(EnumActionResult.FAIL,
+					itemStackIn);
 		}
 	}
 }

@@ -22,6 +22,7 @@ import static net.minecraftforge.fml.client.config.DummyConfigElement.DummyCateg
  */
 public class EMConfigGuiFactory implements IModGuiFactory
 {
+
 	@Override public void initialize(Minecraft minecraftInstance)
 	{
 
@@ -45,10 +46,7 @@ public class EMConfigGuiFactory implements IModGuiFactory
 
 	public static class EMConfigGui extends GuiConfig
 	{
-		public EMConfigGui(GuiScreen parentScreen,
-				List<IConfigElement> configElements, String modID,
-				String configID, boolean allRequireWorldRestart,
-				boolean allRequireMcRestart, String title)
+		public EMConfigGui(GuiScreen parentScreen)
 		{
 			super(parentScreen, getConfigElements(), ElectricityMod.MOD_ID,
 					false, false, I18n.format("gui.config.main_title"));
@@ -65,7 +63,7 @@ public class EMConfigGuiFactory implements IModGuiFactory
 			return list;
 		}
 
-		private static class CategoryEntryBlastFurnace
+		public static class CategoryEntryBlastFurnace
 				extends GuiConfigEntries.CategoryEntry
 		{
 			public CategoryEntryBlastFurnace(GuiConfig owningScreen,
