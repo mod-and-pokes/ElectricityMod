@@ -30,6 +30,7 @@ public class ItemInit
 	public static EMItem slag;
 	public static EMItem crosbowBolt;
 	public static EMItem crosbow;
+	public static EMItem dirtBall;
 
 	public static void Init()
 	{
@@ -42,6 +43,7 @@ public class ItemInit
 		wireSpool = new WireSpool();
 		coalCoke = new EMBaseItem("coal_coke", CreativeTabs.MATERIALS);
 		slag = new EMBaseItem("slag", CreativeTabs.MATERIALS);
+		dirtBall = new EMBaseItem("dirt_ball", CreativeTabs.MATERIALS);
 
 		crosbowBolt = new EMBaseItem("crossbow_bolt", CreativeTabs.COMBAT);
 		crosbow = new Crossbow();
@@ -73,6 +75,7 @@ public class ItemInit
 		RegisterItem(slag);
 		RegisterItem(crosbow);
 		RegisterItem(crosbowBolt);
+		RegisterItem(dirtBall);
 	}
 
 	private static void RegisterItem(EMItem i)
@@ -104,6 +107,8 @@ public class ItemInit
 		RegisterRender(crosbow, 0, crosbow.getMetaFilePath(0));
 		RegisterRender(crosbow, 0, crosbow.getMetaFilePath(1));
 		RegisterRender(crosbowBolt, 0);
+
+		RegisterRender(dirtBall, 0);
 	}
 
 	private static void RegisterRender(EMItem item, int meta)

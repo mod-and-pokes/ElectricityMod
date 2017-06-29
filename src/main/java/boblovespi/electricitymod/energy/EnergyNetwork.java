@@ -109,6 +109,9 @@ public class EnergyNetwork
 						bat.setHasTooLittlePower();
 					}
 				}
+			} else
+			{
+				bat.setHasTooLittlePower();
 			}
 		}
 
@@ -124,6 +127,9 @@ public class EnergyNetwork
 				{
 					mac.setHasTooLittlePower();
 				}
+			} else
+			{
+				mac.setHasTooLittlePower();
 			}
 		}
 		remainingPower = totalPower - usedPower;

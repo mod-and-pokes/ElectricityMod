@@ -17,6 +17,9 @@ public class TileEntityInit
 		initTileEntity(TileEntityPoweredLight.class);
 		initTileEntity(TileEntityNetworkMonitor.class);
 		initTileEntity(TileEntityBlastFurnace.class);
+
+		// Machines
+		initTileEntity(TileEntityMachineCompressor.class);
 	}
 
 	private static void initTileEntity(Class<? extends TileEntity> entity)

@@ -1,55 +1,35 @@
-[21:17:11] [Client thread/INFO]: Setting user: Player155
-[21:17:26] [Client thread/WARN]: Skipping bad option: lastServer:
-[21:17:26] [Client thread/INFO]: LWJGL Version: 2.9.4
-[21:17:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[21:17:44] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:17:44] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[21:17:44] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:17:45] [Thread-8/ERROR]: Error in class 'LibraryLWJGLOpenAL'
-[21:17:45] [Thread-8/ERROR]: Unable to initialize OpenAL.  Probable cause: OpenAL not supported.
-[21:17:45] [Thread-8/WARN]: ERROR MESSAGE:
-[21:17:45] [Thread-8/INFO]: Could not locate OpenAL library.
-[21:17:45] [Thread-8/WARN]: STACK TRACE:
-[21:17:45] [Thread-8/INFO]: org.lwjgl.openal.AL.create(AL.java:156)
-[21:17:45] [Thread-8/INFO]: org.lwjgl.openal.AL.create(AL.java:102)
-[21:17:45] [Thread-8/INFO]: org.lwjgl.openal.AL.create(AL.java:206)
-[21:17:45] [Thread-8/INFO]: paulscode.sound.libraries.LibraryLWJGLOpenAL.init(LibraryLWJGLOpenAL.java:164)
-[21:17:45] [Thread-8/INFO]: paulscode.sound.SoundSystem.CommandNewLibrary(SoundSystem.java:1576)
-[21:17:45] [Thread-8/INFO]: paulscode.sound.SoundSystem.CommandQueue(SoundSystem.java:2572)
-[21:17:45] [Thread-8/INFO]: paulscode.sound.CommandThread.run(CommandThread.java:121)
-[21:17:45] [Sound Library Loader/WARN]: ERROR MESSAGE:
-[21:17:45] [Sound Library Loader/INFO]: Could not locate OpenAL library.
-[21:17:45] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:17:45] [Thread-10/INFO]: Switching to No Sound
-[21:17:45] [Thread-10/INFO]: (Silent Mode)
-[21:17:45] [Sound Library Loader/INFO]: Sound engine started
-[21:17:54] [Client thread/INFO]: Created: 16x16 textures-atlas
-[21:17:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
-[21:18:08] [Client thread/INFO]: SoundSystem shutting down...
-[21:18:08] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[21:18:08] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:18:08] [Thread-12/INFO]: Initializing LWJGL OpenAL
-[21:18:08] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:18:08] [Thread-12/INFO]: OpenAL initialized.
-[21:18:09] [Sound Library Loader/INFO]: Sound engine started
-[21:18:19] [Client thread/INFO]: Created: 512x512 textures-atlas
-[21:18:22] [Client thread/WARN]: Skipping bad option: lastServer:
-[21:18:23] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[21:18:50] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
-[21:18:50] [Server thread/INFO]: Generating keypair
-[21:18:52] [Server thread/INFO]: Preparing start region for level 0
-[21:18:53] [Server thread/INFO]: Preparing spawn area: 32%
-[21:18:54] [Server thread/INFO]: Preparing spawn area: 83%
-[21:18:55] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:18:57] [Server thread/INFO]: Player155[local:E:34eae527] logged in with entity id 44 at (689.5882700978221, 56.75, -431.9882446338276)
-[21:18:57] [Server thread/INFO]: Player155 joined the game
-[21:19:00] [Server thread/INFO]: Saving and pausing game...
-[21:19:00] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[21:19:00] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[21:19:00] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[21:19:03] [Server thread/INFO]: Saving and pausing game...
-[21:19:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
-[21:19:03] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@198ef043[id=60d19c6d-8381-348f-9d23-cb28708609fc,name=Player155,properties={},legacy=false]
+[18:59:58] [Client thread/INFO]: Setting user: Player952
+[19:00:06] [Client thread/WARN]: Skipping bad option: lastServer:
+[19:00:06] [Client thread/INFO]: LWJGL Version: 2.9.4
+[19:00:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[19:00:19] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[19:00:19] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[19:00:19] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:00:19] [Thread-8/INFO]: OpenAL initialized.
+[19:00:20] [Sound Library Loader/INFO]: Sound engine started
+[19:00:26] [Client thread/INFO]: Created: 16x16 textures-atlas
+[19:00:29] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Electricity Mod
+[19:00:32] [Client thread/INFO]: SoundSystem shutting down...
+[19:00:32] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[19:00:32] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[19:00:32] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[19:00:32] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:00:32] [Thread-10/INFO]: OpenAL initialized.
+[19:00:33] [Sound Library Loader/INFO]: Sound engine started
+[19:00:35] [Client thread/INFO]: Created: 512x512 textures-atlas
+[19:00:38] [Client thread/WARN]: Skipping bad option: lastServer:
+[19:00:39] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[19:01:31] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[19:01:31] [Server thread/INFO]: Generating keypair
+[19:01:32] [Server thread/INFO]: Preparing start region for level 0
+[19:01:33] [Server thread/INFO]: Changing view distance to 12, from 10
+[19:01:34] [Server thread/INFO]: Player952[local:E:5f5fc604] logged in with entity id 44 at (683.0650435568309, 56.0, -444.2534644724671)
+[19:01:34] [Server thread/INFO]: Player952 joined the game
+[19:01:36] [Server thread/INFO]: Saving and pausing game...
+[19:01:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[19:01:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[19:01:36] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[19:01:36] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@1d596f02[id=fef5996a-ff47-30bf-9025-1401c61fa24d,name=Player952,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
@@ -71,16 +51,53 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_121]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_121]
 	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
-[21:19:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
-[21:19:03] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
-[21:19:23] [Client thread/INFO]: [CHAT] Usage: /gamemode <mode> [player]
-[21:19:26] [Server thread/INFO]: [Player155: Set own game mode to Creative Mode]
-[21:19:26] [Client thread/INFO]: [CHAT] Your game mode has been updated to Creative Mode
-[21:19:26] [Server thread/INFO]: Player155 has just earned the achievement [Taking Inventory]
-[21:19:26] [Client thread/INFO]: [CHAT] Player155 has just earned the achievement [Taking Inventory]
-[21:19:37] [Client thread/INFO]: [CHAT] is player, doing tests
-[21:19:37] [Client thread/INFO]: [CHAT] charging up
-[21:19:37] [Client thread/INFO]: [CHAT] found ammo
-[21:19:37] [Client thread/INFO]: [CHAT] is player, doing tests
-[21:19:37] [Client thread/INFO]: [CHAT] charging up
-[21:19:37] [Client thread/INFO]: [CHAT] found ammo
+[19:01:37] [Server thread/INFO]: Saving and pausing game...
+[19:01:37] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[19:01:37] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[19:01:37] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End
+[19:02:00] [Server thread/INFO]: Player952 has just earned the achievement [Taking Inventory]
+[19:02:00] [Client thread/INFO]: [CHAT] Player952 has just earned the achievement [Taking Inventory]
+[19:02:07] [Server thread/INFO]: [Player952: Given [item.wire_spool.empty.name] * 1 to Player952]
+[19:02:07] [Client thread/INFO]: [CHAT] Given [item.wire_spool.empty.name] * 1 to Player952
+[19:02:13] [Server thread/INFO]: [Player952: Given [item.wire_spool.copper.name] * 64 to Player952]
+[19:02:13] [Client thread/INFO]: [CHAT] Given [item.wire_spool.copper.name] * 64 to Player952
+[19:02:16] [Client thread/INFO]: [CHAT] Connected to: 680, 56, -443
+[19:02:16] [Client thread/INFO]: [CHAT] linkingPos missing
+[19:02:17] [Client thread/INFO]: [CHAT] Connected to: 680, 56, -444
+[19:02:17] [Client thread/INFO]: [CHAT] Other machine: 680, 56, -443
+[19:02:17] [Client thread/INFO]: [CHAT] Both missing networks
+[19:02:18] [Client thread/INFO]: [CHAT] Connected to: 679, 56, -443
+[19:02:18] [Client thread/INFO]: [CHAT] linkingPos missing
+[19:02:19] [Client thread/INFO]: [CHAT] Connected to: 680, 56, -444
+[19:02:19] [Client thread/INFO]: [CHAT] Other machine: 679, 56, -443
+[19:02:19] [Client thread/INFO]: [CHAT] Both missing networks
+[19:02:20] [Client thread/INFO]: [CHAT] Connected to: 679, 56, -442
+[19:02:20] [Client thread/INFO]: [CHAT] linkingPos missing
+[19:02:20] [Client thread/INFO]: [CHAT] Connected to: 680, 56, -444
+[19:02:20] [Client thread/INFO]: [CHAT] Other machine: 679, 56, -442
+[19:02:20] [Client thread/INFO]: [CHAT] Both missing networks
+[19:02:22] [Client thread/INFO]: [CHAT] Connected to: 680, 56, -442
+[19:02:22] [Client thread/INFO]: [CHAT] linkingPos missing
+[19:02:22] [Client thread/INFO]: [CHAT] Connected to: 680, 56, -444
+[19:02:22] [Client thread/INFO]: [CHAT] Other machine: 680, 56, -442
+[19:02:22] [Client thread/INFO]: [CHAT] Both missing networks
+[19:02:25] [Server thread/ERROR]: Encountered an unexpected exception
+net.minecraft.util.ReportedException: Ticking block entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:790) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:688) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:537) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+Caused by: java.lang.NullPointerException
+	at boblovespi.electricitymod.tileentity.TileEntityMachineCompressor.update(TileEntityMachineCompressor.java:139) ~[TileEntityMachineCompressor.class:?]
+	at net.minecraft.world.World.updateEntities(World.java:1952) ~[World.class:?]
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:647) ~[WorldServer.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:784) ~[MinecraftServer.class:?]
+	... 4 more
+[19:02:25] [Server thread/ERROR]: This crash report has been saved to: C:\Users\Willi\Documents\electricityMod\run\.\crash-reports\crash-2017-04-22_19.02.25-server.txt
+[19:02:25] [Server thread/INFO]: Stopping server
+[19:02:25] [Server thread/INFO]: Saving players
+[19:02:25] [Server thread/INFO]: Saving worlds
+[19:02:25] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Overworld
+[19:02:25] [Server thread/INFO]: Saving chunks for level 'TestWorld'/Nether
+[19:02:25] [Server thread/INFO]: Saving chunks for level 'TestWorld'/The End

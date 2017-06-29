@@ -1,5 +1,6 @@
 package boblovespi.electricitymod.initialization;
 
+import boblovespi.electricitymod.tileentity.TileEntityMachineCompressor;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
@@ -60,6 +61,16 @@ public class CraftingInit
 		// Furnace recipes
 		GameRegistry.addSmelting(Items.BREAD,
 				new ItemStack(ItemInit.flatbread.toItem()), 1f);
+
+		GameRegistry.addSmelting(Items.COAL,
+				new ItemStack(ItemInit.coalCoke.toItem()), 5f);
+
+		// Compressor recipes
+		TileEntityMachineCompressor
+				.Add(new TileEntityMachineCompressor.MachineCompressorRecipe(
+						new ItemStack(Blocks.DIRT, 10),
+						new ItemStack(ItemInit.dirtBall.toItem())));
+
 	}
 
 	private static void AddToolRecipies(@Nonnull Object ingot,
@@ -75,26 +86,26 @@ public class CraftingInit
 		}
 		if (axe != null)
 		{
-			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(axe), "ii ",
-					"is ", " s ", 'i', ingot, 's', stick);
+			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(axe), "ii",
+					"is", " s", 'i', ingot, 's', stick);
 			GameRegistry.addRecipe(r);
 		}
 		if (hoe != null)
 		{
-			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(hoe), "ii ",
-					" s ", " s ", 'i', ingot, 's', stick);
+			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(hoe), "ii",
+					" s", " s", 'i', ingot, 's', stick);
 			GameRegistry.addRecipe(r);
 		}
 		if (sword != null)
 		{
-			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(sword), " i ",
-					" i ", " s ", 'i', ingot, 's', stick);
+			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(sword), "i",
+					"i", "s", 'i', ingot, 's', stick);
 			GameRegistry.addRecipe(r);
 		}
 		if (spade != null)
 		{
-			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(spade), " i ",
-					" s ", " s ", 'i', ingot, 's', stick);
+			ShapedOreRecipe r = new ShapedOreRecipe(new ItemStack(spade), "i",
+					"s", "s", 'i', ingot, 's', stick);
 			GameRegistry.addRecipe(r);
 		}
 

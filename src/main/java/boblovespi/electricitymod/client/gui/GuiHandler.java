@@ -1,7 +1,9 @@
 package boblovespi.electricitymod.client.gui;
 
 import boblovespi.electricitymod.container.ContainerBlastFurnace;
+import boblovespi.electricitymod.container.ContainerMachineCompressor;
 import boblovespi.electricitymod.tileentity.TileEntityBlastFurnace;
+import boblovespi.electricitymod.tileentity.TileEntityMachineCompressor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -13,6 +15,7 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 public class GuiHandler implements IGuiHandler
 {
 	public static final int BLAST_FURNACE = 0;
+	public static final int MACHINE_COMPRESSOR = 1;
 
 	@Override public Object getServerGuiElement(int ID, EntityPlayer player,
 			World world, int x, int y, int z)
@@ -23,6 +26,10 @@ public class GuiHandler implements IGuiHandler
 					(TileEntityBlastFurnace) world
 							.getTileEntity(new BlockPos(x, y, z)));
 		}
+		if (ID == MACHINE_COMPRESSOR)
+			return new ContainerMachineCompressor(player.inventory,
+					(TileEntityMachineCompressor) world
+							.getTileEntity(new BlockPos(x, y, z)));
 		return null;
 	}
 
@@ -35,6 +42,10 @@ public class GuiHandler implements IGuiHandler
 					(TileEntityBlastFurnace) world
 							.getTileEntity(new BlockPos(x, y, z)));
 		}
+		if (ID == MACHINE_COMPRESSOR)
+			return new GuiCompressor(player.inventory,
+					(TileEntityMachineCompressor) world
+							.getTileEntity(new BlockPos(x, y, z)));
 		return null;
 	}
 }

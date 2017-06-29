@@ -22,6 +22,7 @@ public class BlockInit
 	public static EMBlock poweredLight;
 	public static EMBlock blastFurnace;
 	public static EMBlock networkMonitor;
+	public static EMBlock machineCompressor;
 
 	public static void Init()
 	{
@@ -32,6 +33,7 @@ public class BlockInit
 		poweredLight = new PoweredLight();
 		blastFurnace = new BlastFurnace();
 		networkMonitor = new EnergyNetworkMonitor();
+		machineCompressor = new MachineCompressor();
 	}
 
 	public static void Register()
@@ -42,6 +44,7 @@ public class BlockInit
 		RegisterBlock(poweredLight);
 		RegisterBlock(blastFurnace);
 		RegisterBlock(networkMonitor);
+		RegisterBlock(machineCompressor);
 
 		RegisterOnlyBlock(riceCrop);
 	}
@@ -68,6 +71,7 @@ public class BlockInit
 		RegisterRender(poweredLight);
 		RegisterRender(blastFurnace);
 		RegisterRender(networkMonitor);
+		RegisterRender(machineCompressor);
 
 		RegisterRender(riceCrop);
 	}

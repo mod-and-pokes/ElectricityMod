@@ -4,6 +4,7 @@ import boblovespi.electricitymod.initialization.ItemInit;
 import boblovespi.electricitymod.util.Debug;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.entity.projectile.EntityTippedArrow;
@@ -91,7 +92,7 @@ public class Crossbow extends Item implements EMItem
 
 	@Override public int getMaxItemUseDuration(ItemStack stack)
 	{
-		return stack.getItemDamage() == 0 ? 200 : 0;
+		return stack.getItemDamage() == 0 ? 200 : 10;
 	}
 
 	@Override public void getSubItems(Item itemIn, CreativeTabs tab,
@@ -156,6 +157,11 @@ public class Crossbow extends Item implements EMItem
 			World world, EntityPlayer player, EnumHand hand)
 	{
 
+		if (stack.getItemDamage() != 0)
+		{
+			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
+		}
+
 		if (FindAmmo(player) != null)
 		{
 			player.setActiveHand(hand);
@@ -175,24 +181,33 @@ public class Crossbow extends Item implements EMItem
 	@Override public void onPlayerStoppedUsing(ItemStack stack, World world,
 			EntityLivingBase entityLiving, int timeLeft)
 	{
-		if (entityLiving instanceof EntityPlayer)
+		if (!world.isRemote && entityLiving instanceof EntityPlayer)
 		{
+			Debug.DebugLog()
+					.debug("entered, item damage: " + stack.getItemDamage());
 
 			EntityPlayer player = (EntityPlayer) entityLiving;
 
 			Debug.ChatLog(player, "is player, doing tests");
+			Debug.DebugLog().debug("is player, doing tests for shooting");
 
 			if (stack.getItemDamage() == 0) // not loaded
 			{
 				Debug.ChatLog(player, "charging up");
+				Debug.DebugLog().debug("charged");
 
 				ItemStack ammo = FindAmmo(player);
 				if (ammo != null)
 				{
 					Debug.ChatLog(player, "found ammo");
+					Debug.DebugLog().debug("ammo found");
 
 					stack.setItemDamage(getMaxItemUseDuration(stack)
 							- timeLeft); // set charge of crossbow
+
+					Debug.DebugLog()
+							.debug("charge is: " + stack.getItemDamage());
+
 					--ammo.stackSize;
 					if (ammo.stackSize <= 0)
 						player.inventory.deleteStack(ammo);
@@ -202,22 +217,79 @@ public class Crossbow extends Item implements EMItem
 			{
 				Debug.ChatLog(player, "shooting");
 
+				Debug.DebugLog().debug("shooting");
+
 				EntityArrow bolt = new EntityTippedArrow(world, player);
 				bolt.setAim(player, player.rotationPitch, player.rotationYaw,
 						10f, stack.getItemDamage() / 10f, 0.05f);
 
+				EntityZombie test = new EntityZombie(world);
+				test.setPosition(player.posX, player.posY, player.posZ);
+
+				Debug.ChatLog(player,
+						"loc of zombie: " + test.posX + ", " + test.posY + ", "
+								+ test.posZ);
+				Debug.DebugLog()
+						.debug("loc of zombie: " + test.posX + ", " + test.posY
+								+ ", " + test.posZ);
+
 				world.spawnEntityInWorld(bolt);
 
+				world.spawnEntityInWorld(test);
+
+				stack.setItemDamage(0);
 			}
 
 		}
 	}
 
-	//	@Nullable @Override public ItemStack onItemUseFinish(ItemStack stack,
-	//			World worldIn, EntityLivingBase entityLiving)
+	@Override public ItemStack onItemUseFinish(ItemStack stack, World world,
+			EntityLivingBase entityLiving)
+	{
+		if (!world.isRemote && entityLiving instanceof EntityPlayer)
+		{
+			EntityPlayer player = (EntityPlayer) entityLiving;
+			Debug.ChatLog(player, "shooting");
+			Debug.DebugLog().debug("shooting");
+			if (stack.getItemDamage() != 0)
+			{
+				Debug.ChatLog(player, "shooting");
+				Debug.DebugLog().debug("shooting");
+
+				EntityArrow bolt = new EntityTippedArrow(world, player);
+				bolt.setAim(player, player.rotationPitch, player.rotationYaw,
+						10f, stack.getItemDamage() / 10f, 0.05f);
+
+				EntityZombie test = new EntityZombie(world);
+				test.setPosition(player.posX, player.posY, player.posZ);
+
+				Debug.DebugLog()
+						.debug("loc of zombie: " + test.posX + ", " + test.posY
+								+ ", " + test.posZ);
+
+				world.spawnEntityInWorld(bolt);
+
+				world.spawnEntityInWorld(test);
+				stack.setItemDamage(0);
+			}
+		}
+		return stack;
+	}
+
+	//	@Override public EnumActionResult onItemUseFirst(ItemStack stack,
+	//			EntityPlayer player, World world, BlockPos pos, EnumFacing side,
+	//			float hitX, float hitY, float hitZ, EnumHand hand)
 	//	{
+	//		if (!world.isRemote)
+	//		{
+	//			if (stack.getItemDamage() != 0)
+	//			{
+	//				return EnumActionResult.SUCCESS;
+	//			}
+	//			super.onItemUseFirst()
+	//		}
+	//		return EnumActionResult.FAIL;
 	//
-	//		return stack;
 	//	}
 
 	//	@Override public void onUpdate(ItemStack stack, World world, Entity entity,
